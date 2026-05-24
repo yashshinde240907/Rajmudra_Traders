@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Rajmudra Traders – Premium Kissmiss | Nashik, Maharashtra</title>
+<meta name="description" content="Farm-direct premium Kissmiss (raisins) from Nashik, Maharashtra. Sun-dried, naturally processed, delivered across India. Green, Black, Jumbo & Organic varieties."/>
+<meta name="keywords" content="kissmiss, raisins, Nashik, Maharashtra, dry fruits, farm direct, organic raisins, bulk raisins, premium raisins"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet"/>
+
+<style>
+:root{
+  --cream:#f7f2e8;
+  --cream2:#f0e8d6;
+  --cream3:#e8dcc4;
+  --dg:#1e3320;
+  --mg:#2d5231;
+  --lg:#4a7d4e;
+  --gold:#b8882a;
+  --gold2:#d4a843;
+  --gold3:#e8c46a;
+  --brown:#7a5c38;
+  --brown2:#5a3d20;
+  --text:#1a2b1b;
+  --textm:#4a5a3b;
+  --texts:#7a8a6a;
+  --white:#ffffff;
+  --sh:rgba(26,43,27,.12);
+  --sh2:rgba(26,43,27,.06);
+  --saffron:#e07b39;
+  --amber:#c4952a;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  overflow-x:hidden;
+  cursor:none;
+}
+
+/* ── GRAIN OVERLAY ── */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.045'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:9990;opacity:.5;
+}
+
+/* ── CUSTOM CURSOR ── */
+#cursor{position:fixed;width:10px;height:10px;border-radius:50%;background:var(--gold);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s,width .3s,height .3s;mix-blend-mode:multiply}
+#cursor-ring{position:fixed;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--gold);pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .18s ease,width .3s,height .3s;mix-blend-mode:multiply}
+.cursor-grow #cursor{width:20px;height:20px}
+.cursor-grow #cursor-ring{width:56px;height:56px;border-color:var(--gold2)}
+
+/* ── LOADER ── */
+#loader{
+  position:fixed;inset:0;background:var(--dg);z-index:9999;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
+  transition:opacity .8s ease;overflow:hidden;
+}
+#loader.hide{opacity:0;pointer-events:none}
+.loader-sun{
+  width:120px;height:120px;border-radius:50%;
+  background:radial-gradient(circle,var(--gold3) 0%,var(--gold) 40%,transparent 70%);
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);
+  animation:sunrise 2.5s ease forwards;opacity:0;
+}
+@keyframes sunrise{
+  0%{opacity:0;transform:translate(-50%,20%)}
+  40%{opacity:.8;transform:translate(-50%,-30%)}
+  100%{opacity:.6;transform:translate(-50%,-60%)}
+}
+.loader-rays{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);
+  width:240px;height:240px;animation:sunrise 2.5s ease forwards;opacity:0;
+}
+.loader-rays::before,.loader-rays::after{
+  content:'';position:absolute;inset:-20px;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,196,106,.2) 0%,transparent 70%);
+  animation:rayPulse 3s infinite;
+}
+.loader-rays::after{animation-delay:1.5s}
+@keyframes rayPulse{0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.3);opacity:.1}}
+.loader-logo{
+  font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:600;
+  color:var(--cream);letter-spacing:.08em;
+  opacity:0;transform:translateY(20px);
+  animation:fadeUp .9s 1.6s ease forwards;
+  position:relative;z-index:1;
+}
+.loader-logo span{color:var(--gold3)}
+.loader-sub{
+  font-size:.7rem;letter-spacing:.35em;text-transform:uppercase;
+  color:rgba(255,255,255,.4);
+  opacity:0;animation:fadeUp .9s 2s ease forwards;
+}
+.loader-bar-wrap{width:180px;height:1px;background:rgba(255,255,255,.15);border-radius:2px;overflow:hidden;opacity:0;animation:fadeUp .6s 1.4s ease forwards;}
+.loader-bar{height:100%;width:0%;background:linear-gradient(to right,var(--gold),var(--gold3));transition:width .06s}
+.loader-particles{position:absolute;inset:0;pointer-events:none}
+
+/* ── NAVBAR ── */
+nav{
+  position:fixed;top:0;width:100%;z-index:900;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:22px 64px;
+  transition:padding .4s,background .4s,box-shadow .4s;
+}
+nav.scrolled{
+  padding:14px 64px;
+  background:rgba(247,242,232,.96);
+  backdrop-filter:blur(20px);
+  box-shadow:0 1px 0 rgba(184,136,42,.18);
+}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;color:var(--white);letter-spacing:.06em;text-decoration:none;transition:color .3s}
+nav.scrolled .nav-logo{color:var(--dg)}
+.nav-logo em{color:var(--gold3);font-style:italic}
+nav.scrolled .nav-logo em{color:var(--gold)}
+.nav-links{display:flex;gap:38px;list-style:none}
+.nav-links a{text-decoration:none;font-size:.74rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.78);transition:color .25s}
+nav.scrolled .nav-links a{color:var(--textm)}
+.nav-links a:hover{color:var(--gold3)}
+nav.scrolled .nav-links a:hover{color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.cart-btn{
+  position:relative;background:none;border:1.5px solid rgba(255,255,255,.35);
+  color:var(--white);width:42px;height:42px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:.25s;font-size:1.1rem;
+}
+nav.scrolled .cart-btn{border-color:rgba(44,74,46,.3);color:var(--dg)}
+.cart-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--white)}
+.cart-count{
+  position:absolute;top:-4px;right:-4px;
+  background:var(--gold);color:var(--white);
+  width:18px;height:18px;border-radius:50%;font-size:.62rem;font-weight:700;
+  display:none;align-items:center;justify-content:center;
+}
+.nav-cta{
+  background:var(--gold);color:var(--white);
+  border:none;padding:11px 24px;
+  font-family:'DM Sans',sans-serif;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  cursor:pointer;transition:.25s;text-decoration:none;border-radius:1px;
+}
+.nav-cta:hover{background:var(--gold2);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--white);transition:.3s;border-radius:1px}
+nav.scrolled .hamburger span{background:var(--dg)}
+
+/* ── GREETING BAR ── */
+#greeting-bar{
+  background:var(--dg);padding:10px 64px;
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:.75rem;color:rgba(255,255,255,.6);letter-spacing:.08em;
+  transition:background .6s;
+}
+#greeting-bar span{color:var(--gold3)}
+#greeting-bar.morning{background:#1e3320}
+#greeting-bar.afternoon{background:#2a3820}
+#greeting-bar.evening{background:#2a2216}
+#greeting-bar.night{background:#0d1a0e}
+
+/* ── HERO ── */
+#hero{
+  position:relative;min-height:100vh;overflow:hidden;
+  display:flex;align-items:center;
+}
+#hero-canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('https://as2.ftcdn.net/v2/jpg/17/59/50/71/1000_F_1759507154_hNCy5XAmSa6FJrPqZvGNXIpIizd6B56Z.jpg');
+  background-size:cover;background-position:center;
+  animation:heroBgDrift 20s ease-in-out infinite alternate;
+}
+@keyframes heroBgDrift{from{transform:scale(1)}to{transform:scale(1.06)}}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(20,38,22,.88) 0%,rgba(26,43,27,.6) 50%,rgba(20,38,22,.75) 100%);
+}
+.hero-content{
+  position:relative;z-index:10;padding:160px 64px 120px;max-width:700px;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid rgba(232,196,106,.35);color:var(--gold3);
+  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;padding:7px 20px;
+  margin-bottom:38px;border-radius:1px;font-weight:500;
+  opacity:0;transform:translateY(20px);
+  animation:fadeUp .9s .4s ease forwards;
+}
+.hero-dot{width:5px;height:5px;background:var(--gold3);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.4rem,7vw,6.4rem);font-weight:600;line-height:1.0;
+  color:var(--white);margin-bottom:30px;
+  opacity:0;transform:translateY(30px);
+  animation:fadeUp 1s .6s ease forwards;
+}
+.hero-title .line{display:block}
+.hero-title .gold{color:var(--gold3);font-style:italic}
+.hero-title .thin{font-weight:300;font-style:italic}
+.hero-sub{
+  font-size:1.05rem;color:rgba(255,255,255,.68);line-height:1.85;max-width:520px;
+  margin-bottom:50px;font-weight:300;
+  opacity:0;transform:translateY(24px);
+  animation:fadeUp .9s .8s ease forwards;
+}
+.hero-btns{
+  display:flex;gap:16px;flex-wrap:wrap;
+  opacity:0;transform:translateY(20px);
+  animation:fadeUp .9s 1s ease forwards;
+}
+.btn-prim{
+  background:var(--gold);color:var(--white);
+  padding:16px 38px;font-family:'DM Sans',sans-serif;
+  font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  text-decoration:none;transition:.3s;display:inline-flex;align-items:center;gap:10px;border-radius:1px;
+}
+.btn-prim:hover{background:var(--gold2);transform:translateY(-3px);box-shadow:0 14px 32px rgba(184,136,42,.38)}
+.btn-ghost{
+  border:1.5px solid rgba(255,255,255,.38);color:var(--white);
+  padding:14px 36px;font-family:'DM Sans',sans-serif;
+  font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  text-decoration:none;transition:.3s;display:inline-flex;align-items:center;gap:10px;border-radius:1px;
+}
+.btn-ghost:hover{background:rgba(255,255,255,.1);transform:translateY(-3px);border-color:rgba(255,255,255,.6)}
+.hero-stats{
+  display:flex;gap:52px;margin-top:72px;padding-top:40px;
+  border-top:1px solid rgba(255,255,255,.1);
+  opacity:0;transform:translateY(16px);
+  animation:fadeUp .9s 1.2s ease forwards;
+}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:var(--white);line-height:1}
+.stat-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:5px}
+.scroll-ind{
+  position:absolute;bottom:38px;left:64px;
+  display:flex;align-items:center;gap:14px;
+  color:rgba(255,255,255,.4);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+  opacity:0;animation:fadeUp .9s 1.5s ease forwards;
+}
+.scroll-line{width:50px;height:1px;background:linear-gradient(to right,rgba(255,255,255,.4),transparent);animation:scrollAnim 2s infinite}
+@keyframes scrollAnim{0%{transform:scaleX(1);transform-origin:left}100%{transform:scaleX(0);transform-origin:left}}
+
+/* ── HERITAGE DIVIDER ── */
+.heritage-divider{
+  background:var(--dg);padding:24px 64px;
+  display:flex;align-items:center;justify-content:center;gap:32px;
+  flex-wrap:wrap;
+}
+.heritage-item{
+  display:flex;align-items:center;gap:10px;
+  font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);
+}
+.heritage-item span{color:var(--gold3);font-size:.85rem}
+.heritage-sep{width:1px;height:20px;background:rgba(255,255,255,.12)}
+
+/* ── SECTION BASE ── */
+.section-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--gold);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;
+  margin-bottom:16px;
+}
+.section-eyebrow::before{content:'';width:28px;height:1px;background:var(--gold)}
+.section-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,4vw,3.6rem);font-weight:600;
+  color:var(--dg);line-height:1.06;margin-bottom:22px;
+}
+.section-lead{font-size:.96rem;color:var(--textm);line-height:1.88;max-width:580px;margin-bottom:36px;font-weight:300}
+
+/* ── STORY ── */
+#story{background:var(--white);padding:120px 64px}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.story-img-wrap{position:relative}
+.story-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.story-frame{
+  position:absolute;bottom:-22px;left:-22px;
+  width:100%;height:100%;border:2px solid rgba(184,136,42,.22);
+  pointer-events:none;
+}
+.story-badge{
+  position:absolute;bottom:-14px;right:-14px;
+  background:var(--gold);color:var(--white);
+  width:118px;height:118px;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;line-height:1.1;
+  box-shadow:0 8px 32px rgba(184,136,42,.42);
+}
+.story-badge small{font-family:'DM Sans',sans-serif;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.88}
+.story-feats{display:flex;flex-direction:column;gap:0}
+.story-feat{
+  display:flex;gap:20px;align-items:flex-start;
+  padding:20px 0;border-bottom:1px solid var(--cream3);
+  transition:padding-left .3s;
+}
+.story-feat:last-child{border-bottom:none}
+.story-feat:hover{padding-left:8px}
+.feat-icon-wrap{
+  width:48px;height:48px;background:var(--cream);border:1px solid var(--cream3);
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;
+  border-radius:2px;transition:.25s;
+}
+.story-feat:hover .feat-icon-wrap{background:var(--dg);border-color:var(--dg)}
+.feat-title{font-weight:600;color:var(--dg);margin-bottom:4px;font-size:.92rem;letter-spacing:.01em}
+.feat-desc{font-size:.84rem;color:var(--textm);line-height:1.68;font-weight:300}
+
+/* ── MARATHI HERITAGE ── */
+#heritage{
+  background:var(--dg);padding:90px 64px;position:relative;overflow:hidden;
+}
+#heritage::before{
+  content:'';position:absolute;top:-60px;right:-60px;
+  width:360px;height:360px;border-radius:50%;
+  background:radial-gradient(circle,rgba(184,136,42,.12) 0%,transparent 70%);
+}
+.heritage-pattern{
+  position:absolute;bottom:0;right:0;width:300px;height:300px;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e8c46a' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M30 0 L36 12 L48 6 L42 18 L54 24 L42 30 L54 36 L42 42 L48 54 L36 48 L30 60 L24 48 L12 54 L18 42 L6 36 L18 30 L6 24 L18 18 L12 6 L24 12 Z'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events:none;
+}
+.heritage-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.heritage-left .section-eyebrow{color:var(--gold3)}
+.heritage-left .section-eyebrow::before{background:var(--gold3)}
+.heritage-left .section-title{color:var(--white)}
+.heritage-left .section-lead{color:rgba(255,255,255,.6)}
+.heritage-motifs{display:flex;gap:28px;margin-top:36px}
+.motif{
+  text-align:center;padding:22px 20px;border:1px solid rgba(232,196,106,.18);
+  border-radius:2px;flex:1;transition:.3s;
+}
+.motif:hover{border-color:rgba(232,196,106,.5);background:rgba(232,196,106,.05)}
+.motif-symbol{font-size:2rem;margin-bottom:10px;display:block}
+.motif-label{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:500}
+.heritage-img{
+  width:100%;height:420px;object-fit:cover;border-radius:2px;
+  filter:sepia(.15) saturate(1.1);
+}
+
+/* ── JOURNEY ── */
+#journey{background:var(--cream);padding:100px 64px}
+.journey-steps{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:0;margin-top:60px;position:relative;
+}
+.journey-line{
+  position:absolute;top:39px;left:8%;right:8%;height:1px;
+  background:linear-gradient(to right,transparent,var(--gold),transparent);
+  pointer-events:none;
+}
+.journey-step{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;padding:0 16px}
+.journey-num{
+  width:78px;height:78px;background:var(--white);border:2px solid var(--gold);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;margin-bottom:18px;position:relative;z-index:1;transition:.3s;
+}
+.journey-step:hover .journey-num{background:var(--gold);transform:scale(1.08)}
+.journey-label{font-weight:600;color:var(--dg);font-size:.86rem;margin-bottom:6px;letter-spacing:.02em}
+.journey-desc{font-size:.76rem;color:var(--textm);line-height:1.55;font-weight:300}
+
+/* ── PRODUCTS ── */
+#products{background:var(--white);padding:100px 64px}
+.products-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;flex-wrap:wrap;gap:20px}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pcard{
+  background:var(--cream);border:1px solid var(--cream3);
+  overflow:hidden;transition:.4s;position:relative;border-radius:2px;
+}
+.pcard:hover{transform:translateY(-10px);box-shadow:0 28px 64px var(--sh);border-color:rgba(184,136,42,.28)}
+.pcard-img-wrap{position:relative;overflow:hidden;height:268px}
+.pcard-img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.pcard:hover .pcard-img{transform:scale(1.1)}
+.pcard-tag{
+  position:absolute;top:14px;left:14px;
+  background:var(--gold);color:var(--white);
+  font-size:.64rem;letter-spacing:.15em;text-transform:uppercase;
+  padding:5px 12px;font-weight:700;border-radius:1px;
+}
+.pcard-wish{
+  position:absolute;top:12px;right:12px;
+  width:34px;height:34px;background:rgba(247,242,232,.9);border:none;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:.95rem;transition:.25s;backdrop-filter:blur(8px);
+}
+.pcard-wish:hover{background:var(--white);transform:scale(1.15)}
+.pcard-body{padding:24px}
+.pcard-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--dg);margin-bottom:8px}
+.pcard-desc{font-size:.83rem;color:var(--textm);line-height:1.68;margin-bottom:18px;font-weight:300}
+.pcard-meta{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.pcard-price{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--gold)}
+.pcard-price small{font-family:'DM Sans',sans-serif;font-size:.68rem;color:var(--texts);display:block;font-weight:400}
+.pcard-moq{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mg);background:rgba(52,92,55,.08);padding:5px 10px;border:1px solid rgba(52,92,55,.15);border-radius:1px}
+.pcard-actions{display:flex;gap:8px}
+.btn-cart{flex:1;background:var(--dg);color:var(--white);border:none;padding:12px;font-family:'DM Sans',sans-serif;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;cursor:pointer;transition:.25s;border-radius:1px;}
+.btn-cart:hover{background:var(--mg)}
+.btn-quick{background:none;border:1.5px solid var(--cream3);color:var(--textm);padding:12px 13px;cursor:pointer;transition:.25s;font-size:.88rem;border-radius:1px;}
+.btn-quick:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ── HEALTH BENEFITS ── */
+#health{
+  background:linear-gradient(160deg,#f0ebe0 0%,#e8ddc8 100%);
+  padding:100px 64px;position:relative;overflow:hidden;
+}
+#health::before{
+  content:'';position:absolute;right:-100px;top:-100px;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(184,136,42,.07) 0%,transparent 70%);
+}
+.health-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:90px;align-items:center}
+.health-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.health-card{
+  background:rgba(255,255,255,.72);backdrop-filter:blur(12px);
+  border:1px solid rgba(184,136,42,.15);border-radius:3px;
+  padding:26px 22px;transition:.3s;
+}
+.health-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(184,136,42,.1);border-color:rgba(184,136,42,.3)}
+.health-icon{font-size:2.2rem;margin-bottom:12px;display:block}
+.health-title{font-weight:600;color:var(--dg);font-size:.9rem;margin-bottom:6px}
+.health-desc{font-size:.8rem;color:var(--textm);line-height:1.62;font-weight:300}
+.health-highlight{
+  background:var(--dg);color:var(--white);padding:30px;border-radius:3px;
+  margin-top:16px;text-align:center;grid-column:span 2;
+}
+.health-highlight-num{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:600;color:var(--gold3);display:block}
+.health-highlight-label{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.health-img-wrap{position:relative}
+.health-img{width:100%;height:560px;object-fit:cover;border-radius:3px}
+.health-badge-float{
+  position:absolute;top:28px;left:-24px;
+  background:var(--gold);color:var(--white);
+  padding:16px 20px;border-radius:2px;
+  box-shadow:0 8px 28px rgba(184,136,42,.38);
+}
+.health-badge-float strong{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;display:block}
+.health-badge-float small{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;opacity:.88}
+
+/* ── PACKAGING ── */
+#packaging{background:var(--white);padding:100px 64px}
+.packaging-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:60px}
+.pack-card{
+  text-align:center;border:1px solid var(--cream3);
+  padding:32px 20px 28px;background:var(--cream);
+  transition:.35s;border-radius:2px;position:relative;overflow:hidden;
+}
+.pack-card::before{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(to right,var(--gold),var(--gold3));
+  transform:scaleX(0);transform-origin:left;transition:.4s;
+}
+.pack-card:hover::before{transform:scaleX(1)}
+.pack-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px var(--sh)}
+.pack-img{width:100%;height:180px;object-fit:cover;margin-bottom:20px;border-radius:2px}
+.pack-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--dg);margin-bottom:6px}
+.pack-desc{font-size:.8rem;color:var(--textm);line-height:1.6;font-weight:300}
+.pack-sizes{display:flex;gap:6px;justify-content:center;margin-top:12px;flex-wrap:wrap}
+.pack-size{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(52,92,55,.08);color:var(--mg);padding:4px 10px;border-radius:1px;border:1px solid rgba(52,92,55,.15)}
+
+/* ── WHY ── */
+#why{background:var(--dg);padding:100px 64px;position:relative;overflow:hidden}
+#why::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;margin-top:60px}
+.why-item{padding:34px 24px;border:1px solid rgba(232,196,106,.1);border-radius:2px;transition:.35s;text-align:center}
+.why-item:hover{border-color:rgba(232,196,106,.35);background:rgba(232,196,106,.04);transform:translateY(-4px)}
+.why-icon{font-size:2.4rem;margin-bottom:18px;display:block}
+.why-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--gold3);margin-bottom:10px}
+.why-desc{font-size:.83rem;color:rgba(255,255,255,.55);line-height:1.65;font-weight:300}
+
+/* ── COUNTERS ── */
+#counters{background:var(--gold);padding:64px}
+.counter-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
+.cnum{font-family:'Cormorant Garamond',serif;font-size:3.4rem;font-weight:600;color:var(--white);line-height:1}
+.clabel{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:8px}
+
+/* ── CERTIFICATIONS ── */
+#certifications{background:var(--cream);padding:80px 64px}
+.cert-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:50px}
+.cert-item{
+  text-align:center;padding:28px 16px;
+  border:1px solid var(--cream3);background:var(--white);
+  border-radius:2px;transition:.3s;
+}
+.cert-item:hover{transform:translateY(-4px);box-shadow:0 12px 30px var(--sh);border-color:rgba(184,136,42,.2)}
+.cert-icon{font-size:2.8rem;margin-bottom:14px;display:block}
+.cert-title{font-weight:600;font-size:.86rem;color:var(--dg);margin-bottom:4px}
+.cert-desc{font-size:.75rem;color:var(--textm);line-height:1.55;font-weight:300}
+
+/* ── VIRTUAL FARM ── */
+#virtual-farm{background:var(--dg);padding:100px 64px;position:relative;overflow:hidden}
+.vfarm-bg{
+  position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1500043204678-c09da56b5b5f?w=1200&q=70');
+  background-size:cover;background-position:center;opacity:.18;
+}
+.vfarm-content{position:relative;z-index:2;text-align:center;max-width:700px;margin:0 auto}
+.vfarm-content .section-eyebrow{justify-content:center;color:var(--gold3)}
+.vfarm-content .section-eyebrow::before{background:var(--gold3)}
+.vfarm-content .section-title{color:var(--white)}
+.vfarm-content .section-lead{color:rgba(255,255,255,.6);text-align:center;margin:0 auto 40px}
+.vfarm-features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.vfarm-feat{
+  background:rgba(255,255,255,.05);backdrop-filter:blur(10px);
+  border:1px solid rgba(232,196,106,.15);border-radius:2px;
+  padding:28px 22px;text-align:center;transition:.3s;
+}
+.vfarm-feat:hover{border-color:rgba(232,196,106,.4);background:rgba(255,255,255,.08)}
+.vfarm-feat-icon{font-size:2.2rem;margin-bottom:14px;display:block}
+.vfarm-feat-title{font-weight:600;color:var(--gold3);font-size:.9rem;margin-bottom:6px}
+.vfarm-feat-desc{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.6;font-weight:300}
+.vfarm-cta{display:flex;gap:14px;justify-content:center;margin-top:40px;flex-wrap:wrap}
+
+/* ── ORDER STRIP ── */
+#order-strip{
+  background:linear-gradient(to right,#1e3320,#243d26,#1e3320);
+  display:grid;grid-template-columns:repeat(4,1fr);
+  padding:60px 64px;gap:0;
+  border-top:1px solid rgba(184,136,42,.18);
+}
+.obox{padding:0 28px;text-align:center;color:var(--white);border-right:1px solid rgba(255,255,255,.08)}
+.obox:last-child{border-right:none}
+.obox-icon{font-size:2rem;margin-bottom:14px;display:block}
+.obox-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--gold3);margin-bottom:7px}
+.obox-text{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.58;font-weight:300}
+
+/* ── REVIEWS ── */
+#reviews{background:var(--white);padding:100px 64px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rcard{
+  padding:34px;border:1px solid var(--cream3);position:relative;overflow:hidden;transition:.3s;border-radius:2px;
+}
+.rcard::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(to right,var(--gold),var(--gold3));
+  transform:scaleX(0);transform-origin:left;transition:.4s;
+}
+.rcard:hover::before{transform:scaleX(1)}
+.rcard:hover{transform:translateY(-4px);box-shadow:0 16px 40px var(--sh)}
+.stars{color:var(--gold);font-size:.95rem;letter-spacing:2px;margin-bottom:16px}
+.rtext{
+  font-size:.9rem;color:var(--textm);line-height:1.82;font-style:italic;margin-bottom:22px;
+  position:relative;padding-left:18px;font-weight:300;
+}
+.rtext::before{
+  content:'\201C';position:absolute;left:0;top:-10px;
+  font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold3);line-height:1;
+}
+.reviewer{display:flex;align-items:center;gap:12px}
+.ravatar{
+  width:42px;height:42px;border-radius:50%;background:var(--dg);color:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;flex-shrink:0;
+}
+.rname{font-weight:600;color:var(--dg);font-size:.86rem}
+.rloc{font-size:.74rem;color:var(--texts)}
+
+/* ── GALLERY ── */
+#gallery{background:var(--cream);padding:80px 64px}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  grid-template-rows:200px 200px;gap:10px;margin-top:48px;
+}
+.gitem{overflow:hidden;position:relative;cursor:pointer;border-radius:2px}
+.gitem:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gitem img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;display:block}
+.gitem:hover img{transform:scale(1.08)}
+.gitem::after{
+  content:'';position:absolute;inset:0;background:rgba(26,43,27,.5);
+  opacity:0;transition:.3s;
+}
+.gitem:hover::after{opacity:1}
+
+/* ── BULK EXPORT ── */
+#bulk{background:var(--white);padding:100px 64px}
+.bulk-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.bulk-tiers{display:flex;flex-direction:column;gap:16px;margin-top:36px}
+.bulk-tier{
+  border:1px solid var(--cream3);padding:22px 24px;border-radius:2px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;transition:.3s;flex-wrap:wrap;
+}
+.bulk-tier.featured{border-color:var(--gold);background:rgba(184,136,42,.04)}
+.bulk-tier:hover{border-color:var(--gold);transform:translateX(4px)}
+.bulk-tier-qty{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--dg)}
+.bulk-tier-label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--textm);margin-top:2px}
+.bulk-tier-disc{background:var(--gold);color:var(--white);padding:5px 14px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;border-radius:1px}
+.bulk-tier-btn{
+  background:none;border:1.5px solid var(--dg);color:var(--dg);
+  padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:.74rem;
+  letter-spacing:.1em;text-transform:uppercase;font-weight:600;cursor:pointer;transition:.25s;border-radius:1px;
+}
+.bulk-tier-btn:hover{background:var(--dg);color:var(--white)}
+.bulk-form-wrap{background:var(--cream);padding:40px;border:1px solid var(--cream3)}
+.bulk-form-title{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--dg);margin-bottom:8px}
+.bulk-form-sub{font-size:.85rem;color:var(--textm);margin-bottom:26px;font-weight:300}
+.bulk-form{display:flex;flex-direction:column;gap:14px}
+.fg{display:flex;flex-direction:column;gap:7px}
+.fg label{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600;color:var(--dg)}
+.fg input,.fg textarea,.fg select{
+  padding:12px 15px;border:1.5px solid var(--cream3);
+  background:var(--white);font-family:'DM Sans',sans-serif;font-size:.88rem;
+  color:var(--text);outline:none;transition:.25s;border-radius:2px;font-weight:300;
+}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--gold)}
+.fg textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-submit{
+  background:var(--gold);color:var(--white);border:none;
+  padding:14px 32px;font-family:'DM Sans',sans-serif;
+  font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  cursor:pointer;transition:.25s;align-self:flex-start;border-radius:1px;
+}
+.form-submit:hover{background:var(--gold2);transform:translateY(-2px)}
+.form-msg{font-size:.84rem;padding:11px 15px;display:none;border-radius:2px}
+.form-msg.ok{background:#e8f5e9;color:#2e7d32;border-left:3px solid #4caf50}
+.form-msg.err{background:#fce4ec;color:#c62828;border-left:3px solid #f44336}
+
+/* ── PINCODE ── */
+#pincode-section{background:var(--cream);padding:80px 64px}
+.pincode-wrap{max-width:660px;margin:0 auto;text-align:center}
+.pincode-form{display:flex;gap:12px;max-width:420px;margin:30px auto 0}
+.pincode-input{flex:1;padding:14px 18px;border:1.5px solid var(--cream3);background:var(--white);font-family:'DM Sans',sans-serif;font-size:.92rem;color:var(--text);outline:none;transition:.25s;border-radius:2px}
+.pincode-input:focus{border-color:var(--gold)}
+.pincode-btn{background:var(--gold);color:var(--white);border:none;padding:14px 26px;font-family:'DM Sans',sans-serif;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;cursor:pointer;transition:.25s;border-radius:2px;white-space:nowrap}
+.pincode-btn:hover{background:var(--gold2)}
+.pincode-result{margin-top:18px;padding:13px 18px;border-radius:2px;font-size:.86rem;font-weight:500;display:none}
+.pincode-result.ok{background:#e8f5e9;color:#2e7d32;border-left:3px solid #4caf50}
+.pincode-result.no{background:#fce4ec;color:#c62828;border-left:3px solid #f44336}
+
+/* ── FAQ ── */
+#faq{background:var(--white);padding:100px 64px}
+.faq-wrap{max-width:780px;margin:56px auto 0}
+.faq-item{border-bottom:1px solid var(--cream3)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;font-weight:600;color:var(--dg);font-size:.95rem;transition:color .25s;gap:16px;letter-spacing:.01em;}
+.faq-q:hover{color:var(--gold)}
+.faq-arrow{font-size:1.1rem;color:var(--gold);flex-shrink:0;transition:transform .35s}
+.faq-item.open .faq-arrow{transform:rotate(45deg)}
+.faq-a{font-size:.86rem;color:var(--textm);line-height:1.82;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding:0;font-weight:300;}
+.faq-item.open .faq-a{max-height:320px;padding-bottom:20px}
+
+/* ── CONTACT ── */
+#contact{background:var(--cream);padding:100px 64px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:26px;margin-top:34px}
+.contact-item{display:flex;gap:18px;align-items:flex-start}
+.contact-icon{width:50px;height:50px;background:var(--white);border:1px solid var(--cream3);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;border-radius:2px}
+.contact-item-title{font-weight:600;color:var(--dg);margin-bottom:4px;font-size:.88rem;letter-spacing:.01em}
+.contact-item-val{font-size:.85rem;color:var(--textm);line-height:1.65;font-weight:300}
+.contact-item-val a{color:var(--gold);text-decoration:none;transition:.2s}
+.contact-item-val a:hover{color:var(--gold2)}
+.contact-form-wrap{background:var(--white);padding:44px;border:1px solid var(--cream3)}
+.form-title{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:600;color:var(--dg);margin-bottom:8px}
+.form-sub{font-size:.84rem;color:var(--textm);margin-bottom:28px;font-weight:300}
+.contact-form{display:flex;flex-direction:column;gap:14px}
+
+/* ── AI CHAT WIDGET ── */
+#ai-btn{
+  position:fixed;bottom:108px;right:32px;z-index:800;
+  background:var(--dg);color:var(--white);
+  width:58px;height:58px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;box-shadow:0 6px 24px rgba(26,43,27,.4);
+  border:none;font-size:1.4rem;transition:.3s;
+}
+#ai-btn:hover{background:var(--mg);transform:scale(1.08)}
+#ai-chat{
+  position:fixed;bottom:180px;right:32px;z-index:800;
+  width:340px;background:var(--white);border-radius:4px;
+  box-shadow:0 16px 60px rgba(26,43,27,.2);
+  border:1px solid var(--cream3);
+  display:none;flex-direction:column;overflow:hidden;
+}
+#ai-chat.open{display:flex}
+.ai-chat-header{
+  background:var(--dg);color:var(--white);
+  padding:14px 18px;display:flex;align-items:center;justify-content:space-between;
+}
+.ai-chat-title{font-weight:600;font-size:.88rem}
+.ai-chat-sub{font-size:.72rem;opacity:.6;margin-top:2px}
+.ai-chat-close{background:none;border:none;color:rgba(255,255,255,.6);cursor:pointer;font-size:1rem;transition:.2s}
+.ai-chat-close:hover{color:var(--white)}
+.ai-chat-body{padding:16px;height:260px;overflow-y:auto;display:flex;flex-direction:column;gap:10px;font-size:.84rem}
+.ai-msg{max-width:88%;padding:10px 14px;border-radius:3px;line-height:1.6;font-weight:300}
+.ai-msg.bot{background:var(--cream);color:var(--text);align-self:flex-start;border-radius:0 10px 10px 10px}
+.ai-msg.user{background:var(--dg);color:var(--white);align-self:flex-end;border-radius:10px 0 10px 10px}
+.ai-typing{display:flex;gap:4px;padding:10px 14px;background:var(--cream);align-self:flex-start;border-radius:0 10px 10px 10px}
+.ai-typing span{width:6px;height:6px;background:var(--textm);border-radius:50%;animation:typingDot 1.2s infinite}
+.ai-typing span:nth-child(2){animation-delay:.2s}
+.ai-typing span:nth-child(3){animation-delay:.4s}
+@keyframes typingDot{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
+.ai-quick-btns{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 10px}
+.ai-quick-btn{background:none;border:1px solid var(--cream3);color:var(--textm);padding:5px 12px;font-size:.74rem;border-radius:30px;cursor:pointer;transition:.2s;font-family:'DM Sans',sans-serif}
+.ai-quick-btn:hover{border-color:var(--gold);color:var(--gold)}
+.ai-chat-input-row{display:flex;padding:10px 14px;border-top:1px solid var(--cream3);gap:8px}
+.ai-chat-input{flex:1;border:1.5px solid var(--cream3);padding:8px 12px;font-family:'DM Sans',sans-serif;font-size:.84rem;outline:none;border-radius:2px;color:var(--text);transition:.2s}
+.ai-chat-input:focus{border-color:var(--gold)}
+.ai-send-btn{background:var(--gold);color:var(--white);border:none;padding:8px 14px;border-radius:2px;cursor:pointer;font-size:.88rem;transition:.2s}
+.ai-send-btn:hover{background:var(--gold2)}
+
+/* ── WA FLOAT ── */
+.wa-float{
+  position:fixed;bottom:34px;right:32px;z-index:800;
+  background:#25d366;color:var(--white);
+  width:58px;height:58px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.4);
+  animation:wapulse 2.5s infinite;transition:transform .25s;
+}
+.wa-float:hover{transform:scale(1.12)}
+@keyframes wapulse{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.4)}50%{box-shadow:0 6px 40px rgba(37,211,102,.7)}}
+
+/* ── CART SIDEBAR ── */
+#cart-sidebar{
+  position:fixed;top:0;right:-480px;width:460px;height:100%;
+  background:var(--white);z-index:9500;
+  box-shadow:-8px 0 60px rgba(0,0,0,.15);
+  transition:right .4s ease;display:flex;flex-direction:column;
+}
+#cart-sidebar.open{right:0}
+.cart-header{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;border-bottom:1px solid var(--cream3)}
+.cart-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--dg)}
+.cart-close{background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--textm);transition:.2s}
+.cart-close:hover{color:var(--gold)}
+.cart-body{flex:1;overflow-y:auto;padding:18px 28px;display:flex;flex-direction:column;gap:14px}
+.cart-empty{text-align:center;padding:56px 20px;color:var(--textm);font-size:.92rem;font-weight:300}
+.cart-empty-icon{font-size:2.8rem;display:block;margin-bottom:14px}
+.cart-item{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--cream3)}
+.cart-item-img{width:62px;height:62px;object-fit:cover;flex-shrink:0;border-radius:2px}
+.cart-item-name{font-weight:600;color:var(--dg);font-size:.88rem;margin-bottom:4px}
+.cart-item-price{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1rem;font-weight:600}
+.cart-item-qty{display:flex;align-items:center;gap:8px;margin-top:5px}
+.qty-btn{width:25px;height:25px;border:1px solid var(--cream3);background:none;cursor:pointer;font-size:.88rem;border-radius:2px;transition:.2s}
+.qty-btn:hover{border-color:var(--gold);color:var(--gold)}
+.qty-val{font-size:.86rem;font-weight:600;color:var(--dg);min-width:24px;text-align:center}
+.cart-item-del{background:none;border:none;font-size:.95rem;cursor:pointer;color:var(--texts);margin-left:auto;transition:.2s}
+.cart-item-del:hover{color:#e74c3c}
+.cart-footer{padding:18px 28px;border-top:1px solid var(--cream3)}
+.cart-total{display:flex;justify-content:space-between;margin-bottom:14px;font-weight:600;color:var(--dg)}
+.cart-total-price{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold)}
+.cart-checkout{width:100%;background:var(--gold);color:var(--white);border:none;padding:15px;font-family:'DM Sans',sans-serif;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;cursor:pointer;transition:.25s;border-radius:1px}
+.cart-checkout:hover{background:var(--gold2)}
+.cart-wa{width:100%;background:none;border:1.5px solid #25d366;color:#25d366;padding:12px;font-family:'DM Sans',sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;cursor:pointer;transition:.25s;margin-top:8px;border-radius:1px;display:flex;align-items:center;justify-content:center;gap:8px}
+.cart-wa:hover{background:#25d366;color:var(--white)}
+#cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9400;opacity:0;pointer-events:none;transition:.3s}
+#cart-overlay.show{opacity:1;pointer-events:all}
+
+/* ── PRODUCT MODAL ── */
+#pmodal{position:fixed;inset:0;z-index:9600;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:.35s}
+#pmodal.open{opacity:1;pointer-events:all}
+#pmodal-overlay{position:absolute;inset:0;background:rgba(26,43,27,.78);backdrop-filter:blur(8px)}
+.pmodal-box{position:relative;background:var(--white);max-width:820px;width:100%;max-height:90vh;overflow-y:auto;border-radius:2px;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 32px 80px rgba(0,0,0,.3)}
+.pmodal-img{width:100%;height:100%;object-fit:cover;min-height:420px}
+.pmodal-body{padding:40px;display:flex;flex-direction:column;gap:15px}
+.pmodal-close{position:absolute;top:14px;right:14px;background:rgba(0,0,0,.42);color:var(--white);border:none;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;z-index:1;transition:.2s}
+.pmodal-close:hover{background:var(--gold)}
+.pmodal-name{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;color:var(--dg)}
+.pmodal-price{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--gold)}
+.pmodal-desc{font-size:.88rem;color:var(--textm);line-height:1.78;font-weight:300}
+.pmodal-qty-label{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600;color:var(--dg)}
+.pmodal-qty{display:flex;align-items:center;gap:14px;margin-top:6px}
+.pmodal-qty-btn{width:36px;height:36px;border:1.5px solid var(--cream3);background:none;cursor:pointer;font-size:1.1rem;border-radius:2px;transition:.2s}
+.pmodal-qty-btn:hover{border-color:var(--gold);color:var(--gold)}
+.pmodal-qty-val{font-size:1.1rem;font-weight:700;color:var(--dg);min-width:32px;text-align:center}
+.pmodal-actions{display:flex;flex-direction:column;gap:10px;margin-top:auto}
+.pmodal-cart{background:var(--dg);color:var(--white);border:none;padding:14px;font-family:'DM Sans',sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;cursor:pointer;transition:.25s;border-radius:1px}
+.pmodal-cart:hover{background:var(--mg)}
+.pmodal-wa{background:none;border:1.5px solid #25d366;color:#25d366;padding:12px;font-family:'DM Sans',sans-serif;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;cursor:pointer;transition:.25s;border-radius:1px;display:flex;align-items:center;justify-content:center;gap:8px}
+.pmodal-wa:hover{background:#25d366;color:var(--white)}
+
+/* ── TOAST ── */
+#toast{position:fixed;bottom:110px;right:32px;z-index:9700;background:var(--dg);color:var(--white);padding:13px 20px;border-radius:2px;border-left:3px solid var(--gold);font-size:.84rem;font-weight:500;transform:translateY(20px);opacity:0;transition:.35s;pointer-events:none;max-width:270px}
+#toast.show{transform:translateY(0);opacity:1}
+
+/* ── MOBILE NAV ── */
+.mobile-nav{display:none;position:fixed;inset:0;background:var(--dg);z-index:9800;flex-direction:column;align-items:center;justify-content:center;gap:34px}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--white);text-decoration:none;letter-spacing:.04em;transition:.2s}
+.mobile-nav a:hover{color:var(--gold3)}
+.mobile-close{position:absolute;top:20px;right:24px;font-size:1.6rem;cursor:pointer;color:rgba(255,255,255,.5);transition:.2s}
+.mobile-close:hover{color:var(--white)}
+
+/* ── FOOTER ── */
+footer{background:var(--text);padding:70px 64px 30px}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:52px}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:600;color:var(--white);margin-bottom:12px}
+.footer-brand em{color:var(--gold);font-style:italic}
+.footer-tagline{font-size:.84rem;color:rgba(255,255,255,.42);line-height:1.78;font-weight:300}
+.footer-col-title{font-weight:600;color:var(--white);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{color:rgba(255,255,255,.42);text-decoration:none;font-size:.85rem;transition:.2s;display:flex;align-items:center;gap:6px;font-weight:300}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:26px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.76rem;color:rgba(255,255,255,.28)}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-l{opacity:0;transform:translateX(-34px);transition:opacity .8s ease,transform .8s ease}
+.reveal-l.visible{opacity:1;transform:none}
+.reveal-r{opacity:0;transform:translateX(34px);transition:opacity .8s ease,transform .8s ease}
+.reveal-r.visible{opacity:1;transform:none}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  nav,nav.scrolled,#greeting-bar,.heritage-divider{padding-left:32px;padding-right:32px}
+  #hero .hero-content,#story,#heritage,#journey,#products,#health,#packaging,#why,#virtual-farm,#order-strip,#reviews,#gallery,#bulk,#pincode-section,#faq,#contact,#certifications{padding-left:32px;padding-right:32px}
+  #counters{padding:50px 32px}
+  footer{padding-left:32px;padding-right:32px}
+  .story-grid,.contact-grid,.health-grid,.bulk-grid,.heritage-grid{grid-template-columns:1fr;gap:50px}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  #order-strip{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr;gap:38px}
+  .journey-steps{grid-template-columns:repeat(3,1fr)}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+  .gitem:nth-child(1){grid-column:span 1;grid-row:span 1}
+  .pmodal-box{grid-template-columns:1fr}
+  .pmodal-img{min-height:260px}
+  .counter-grid{grid-template-columns:repeat(2,1fr)}
+  .packaging-grid{grid-template-columns:repeat(2,1fr)}
+  .cert-grid{grid-template-columns:repeat(3,1fr)}
+  .vfarm-features{grid-template-columns:1fr 1fr}
+  .health-img{height:400px}
+}
+@media(max-width:700px){
+  nav,nav.scrolled{padding:13px 18px}
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  #hero .hero-content{padding:130px 18px 80px}
+  #story,#heritage,#journey,#products,#health,#packaging,#why,#virtual-farm,#reviews,#gallery,#bulk,#pincode-section,#faq,#contact,#certifications{padding:60px 18px}
+  #order-strip{padding:40px 18px;grid-template-columns:1fr}
+  #counters{padding:48px 18px}
+  footer{padding:48px 18px 26px}
+  #greeting-bar{padding:9px 18px;flex-direction:column;gap:3px;text-align:center}
+  .heritage-divider{padding:18px;gap:18px}
+  .hero-stats{gap:22px}
+  .products-grid,.reviews-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .journey-steps{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:28px}
+  .form-row{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .pincode-form{flex-direction:column}
+  #cart-sidebar{width:100%;right:-100%}
+  .counter-grid{grid-template-columns:1fr 1fr}
+  .obox{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);padding:18px 0}
+  .obox:last-child{border-bottom:none}
+  .packaging-grid,.cert-grid{grid-template-columns:1fr 1fr}
+  .vfarm-features{grid-template-columns:1fr}
+  .health-cards{grid-template-columns:1fr}
+  .health-highlight{grid-column:span 1}
+  .heritage-motifs{flex-direction:column}
+  #ai-chat{width:calc(100vw - 40px);right:20px}
+  .scroll-ind{left:18px}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-sun"></div>
+  <div class="loader-rays"></div>
+  <canvas class="loader-particles" id="loaderCanvas"></canvas>
+  <div class="loader-logo">Raj<span>mudra</span></div>
+  <div class="loader-sub">Premium Kissmiss · Nashik, Maharashtra</div>
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+</div>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- WA FLOAT -->
+<a class="wa-float" href="https://wa.me/918177837267?text=Hi%20Rajmudra%20Traders!%20I%20am%20interested%20in%20your%20Kissmiss%20products." target="_blank" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- AI CHAT BUTTON -->
+<button id="ai-btn" onclick="toggleAI()" title="Ask Kissmiss Assistant">🤖</button>
+
+<!-- AI CHAT PANEL -->
+<div id="ai-chat">
+  <div class="ai-chat-header">
+    <div>
+      <div class="ai-chat-title">🌿 Kissmiss Assistant</div>
+      <div class="ai-chat-sub">Ask anything about our products</div>
+    </div>
+    <button class="ai-chat-close" onclick="toggleAI()">✕</button>
+  </div>
+  <div class="ai-chat-body" id="ai-body"></div>
+  <div class="ai-quick-btns">
+    <button class="ai-quick-btn" onclick="quickAsk('What products do you have?')">Products</button>
+    <button class="ai-quick-btn" onclick="quickAsk('What is the price?')">Pricing</button>
+    <button class="ai-quick-btn" onclick="quickAsk('Do you deliver to my city?')">Delivery</button>
+    <button class="ai-quick-btn" onclick="quickAsk('Minimum order quantity?')">MOQ</button>
+    <button class="ai-quick-btn" onclick="quickAsk('How to place an order?')">Order</button>
+  </div>
+  <div class="ai-chat-input-row">
+    <input class="ai-chat-input" id="ai-input" placeholder="Type your question…" onkeydown="if(event.key==='Enter')sendAI()"/>
+    <button class="ai-send-btn" onclick="sendAI()">→</button>
+  </div>
+</div>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <span class="mobile-close" id="mobileClose">✕</span>
+  <a href="#story" onclick="closeMob()">Our Story</a>
+  <a href="#products" onclick="closeMob()">Products</a>
+  <a href="#health" onclick="closeMob()">Health Benefits</a>
+  <a href="#reviews" onclick="closeMob()">Reviews</a>
+  <a href="#bulk" onclick="closeMob()">Bulk Orders</a>
+  <a href="#faq" onclick="closeMob()">FAQ</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+</div>
+
+<!-- CART OVERLAY & SIDEBAR -->
+<div id="cart-overlay" onclick="closeCart()"></div>
+<div id="cart-sidebar">
+  <div class="cart-header">
+    <div class="cart-title">Your Cart</div>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cart-body">
+    <div class="cart-empty"><span class="cart-empty-icon">🛒</span>Your cart is empty.<br>Add some premium Kissmiss!</div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><span class="cart-total-price" id="cart-total-price">₹0</span></div>
+    <button class="cart-checkout" onclick="checkoutWA()">Checkout via WhatsApp</button>
+    <button class="cart-wa" onclick="checkoutWA()">
+      <svg viewBox="0 0 24 24" width="15" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Send Order on WhatsApp
+    </button>
+  </div>
+</div>
+
+<!-- PRODUCT MODAL -->
+<div id="pmodal">
+  <div id="pmodal-overlay" onclick="closeModal()"></div>
+  <div class="pmodal-box" id="pmodal-box">
+    <img class="pmodal-img" id="pmodal-img" src="" alt=""/>
+    <div class="pmodal-body">
+      <button class="pmodal-close" onclick="closeModal()">✕</button>
+      <div class="pmodal-name" id="pmodal-name"></div>
+      <div class="pmodal-price" id="pmodal-price"></div>
+      <div class="pmodal-desc" id="pmodal-desc"></div>
+      <div>
+        <div class="pmodal-qty-label">Quantity (kg)</div>
+        <div class="pmodal-qty">
+          <button class="pmodal-qty-btn" onclick="changeModalQty(-1)">−</button>
+          <div class="pmodal-qty-val" id="pmodal-qty">5</div>
+          <button class="pmodal-qty-btn" onclick="changeModalQty(1)">+</button>
+        </div>
+      </div>
+      <div class="pmodal-actions">
+        <button class="pmodal-cart" onclick="addFromModal()">Add to Cart</button>
+        <button class="pmodal-wa" onclick="orderFromModal()">
+          <svg viewBox="0 0 24 24" width="14" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Order on WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a class="nav-logo" href="#">Raj<em>mudra</em></a>
+  <ul class="nav-links">
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#health">Health</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#bulk">Bulk Orders</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="cart-btn" onclick="openCart()" title="Cart">🛒<span class="cart-count" id="cart-count">0</span></button>
+    <a class="nav-cta" href="https://wa.me/918177837267" target="_blank">Order Now</a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- GREETING BAR -->
+<div id="greeting-bar">
+  <span id="greeting-text">Good morning! 🌅</span>
+  <span>🌿 Free shipping above ₹2,000 · Pan-India delivery · Farm-fresh guarantee</span>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="hero-dot"></span>🌿 Farm-Fresh · Nashik, Maharashtra</div>
+    <h1 class="hero-title">
+      <span class="line thin">Premium</span>
+      <span class="line gold">Kissmiss</span>
+      <span class="line">Direct from Farm</span>
+    </h1>
+    <p class="hero-sub">Sun-dried raisins grown on the fertile soils of Nashik — hand-picked, naturally processed, and delivered straight to your doorstep. No middlemen. Pure taste.</p>
+    <div class="hero-btns">
+      <a class="btn-prim" href="#products">🍇 Shop Varieties</a>
+      <a class="btn-ghost" href="#story">Our Farm Story →</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num" data-count="15">0</div><div class="stat-label">Years Growing</div></div>
+      <div><div class="stat-num" data-count="500">0</div><div class="stat-label">Happy Buyers</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-label">Natural & Pure</div></div>
+    </div>
+  </div>
+  <div class="scroll-ind"><div class="scroll-line"></div>Scroll to discover</div>
+</section>
+
+<!-- HERITAGE DIVIDER -->
+<div class="heritage-divider">
+  <div class="heritage-item"><span>🌾</span>Farm Direct</div>
+  <div class="heritage-sep"></div>
+  <div class="heritage-item"><span>☀️</span>Sun Dried</div>
+  <div class="heritage-sep"></div>
+  <div class="heritage-item"><span>🌿</span>No Preservatives</div>
+  <div class="heritage-sep"></div>
+  <div class="heritage-item"><span>🚚</span>Pan-India Delivery</div>
+  <div class="heritage-sep"></div>
+  <div class="heritage-item"><span>📦</span>Bulk Available</div>
+  <div class="heritage-sep"></div>
+  <div class="heritage-item"><span>🏆</span>Since 2008</div>
+</div>
+
+<!-- STORY -->
+<section id="story">
+  <div class="story-grid">
+    <div class="story-img-wrap reveal-l">
+      <img class="story-img" src="https://media.istockphoto.com/id/974877012/photo/a-sweet-dried-fruit-golden-raisins-or-vitis-vinifera-l-var-apyrena-kishmish-or-zante-currant.jpg?b=1&s=612x612&w=0&k=20&c=JVeL5tXUMhd5wGYjqIdfazKcRphatZcJYeEip3z7jLE=" alt="Nashik vineyard" loading="lazy"/>
+      <div class="story-frame"></div>
+      <div class="story-badge">Since<br>2008<br><small>Nashik</small></div>
+    </div>
+    <div class="reveal-r">
+      <div class="section-eyebrow">🌾 Our Farm Story</div>
+      <h2 class="section-title">Grown with Love,<br>Harvested with Pride</h2>
+      <p class="section-lead">We are a family-run farm in Kede, Ugaon, Niphad — the heart of Nashik's grape belt. For generations, our family has cultivated vineyards using traditional wisdom blended with modern care. When you order from Rajmudra Traders, you're buying directly from the hands that grew it.</p>
+      <div class="story-feats">
+        <div class="story-feat"><div class="feat-icon-wrap">☀️</div><div><div class="feat-title">Naturally Sun-Dried</div><div class="feat-desc">Our grapes are laid out under Nashik's warm sun on raised drying beds — no artificial drying, no additives, just pure sunshine.</div></div></div>
+        <div class="story-feat"><div class="feat-icon-wrap">🤝</div><div><div class="feat-title">Direct from Farmer to You</div><div class="feat-desc">No middlemen means better prices for you and fair returns for us. Every order is packed fresh from our farm storage.</div></div></div>
+        <div class="story-feat"><div class="feat-icon-wrap">🌱</div><div><div class="feat-title">Sustainable Farming</div><div class="feat-desc">We use responsible water management and minimal chemical input — because healthy soil means sweeter raisins.</div></div></div>
+        <div class="story-feat"><div class="feat-icon-wrap">✅</div><div><div class="feat-title">Quality Checked Every Batch</div><div class="feat-desc">Each batch is hand-sorted, cleaned and inspected before packing. We reject anything that doesn't meet our standard.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARATHI HERITAGE -->
+<section id="heritage">
+  <div class="heritage-pattern"></div>
+  <div class="heritage-grid">
+    <div class="heritage-left reveal-l">
+      <div class="section-eyebrow">🏛 Marathi Heritage</div>
+      <h2 class="section-title">Rooted in the Soul of Maharashtra</h2>
+      <p class="section-lead">Nashik is not just a location — it is a legacy. Our family carries the proud tradition of Marathi agriculture, passed down through generations of Niphad's renowned grape farmers. Every raisin carries the warmth of this land.</p>
+      <div class="heritage-motifs">
+        <div class="motif"><span class="motif-symbol">🌸</span><div class="motif-label">Rajmudra<br>Tradition</div></div>
+        <div class="motif"><span class="motif-symbol">🏺</span><div class="motif-label">Nashik<br>Heritage</div></div>
+        <div class="motif"><span class="motif-symbol">🌿</span><div class="motif-label">Farm<br>Pride</div></div>
+        <div class="motif"><span class="motif-symbol">☀️</span><div class="motif-label">Pure<br>Sunshine</div></div>
+      </div>
+    </div>
+    <div class="reveal-r">
+      <img class="heritage-img" src="https://media.istockphoto.com/id/181425582/photo/winery-gold.jpg?s=612x612&w=0&k=20&c=UO0Z3LZgJ2UIlazrt4iPKszmjNIdqLihp-LGzbBVFGk=" alt="Maharashtra farm" loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey">
+  <div style="text-align:center" class="reveal">
+    <div class="section-eyebrow" style="justify-content:center">🚜 Farm to Your Table</div>
+    <h2 class="section-title">The Rajmudra Journey</h2>
+    <p class="section-lead" style="margin:0 auto;text-align:center">Every raisin in your pack follows a 5-step journey of care, sun, and tradition.</p>
+  </div>
+  <div class="journey-steps">
+    <div class="journey-line"></div>
+    <div class="journey-step reveal"><div class="journey-num">🌿</div><div class="journey-label">Cultivate</div><div class="journey-desc">Grapes grown on our Nashik vineyards using traditional methods</div></div>
+    <div class="journey-step reveal"><div class="journey-num">✂️</div><div class="journey-label">Hand-Pick</div><div class="journey-desc">Bunches selected at peak ripeness for maximum sweetness</div></div>
+    <div class="journey-step reveal"><div class="journey-num">☀️</div><div class="journey-label">Sun-Dry</div><div class="journey-desc">Laid on raised beds under Nashik's golden sun for weeks</div></div>
+    <div class="journey-step reveal"><div class="journey-num">🔍</div><div class="journey-label">Sort & Clean</div><div class="journey-desc">Hand-sorted and cleaned to remove stems and impurities</div></div>
+    <div class="journey-step reveal"><div class="journey-num">📦</div><div class="journey-label">Pack & Ship</div><div class="journey-desc">Packed fresh and shipped pan-India within 2–3 working days</div></div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="products-header reveal">
+    <div>
+      <div class="section-eyebrow">🍇 Our Varieties</div>
+      <h2 class="section-title">Product Range & Pricing</h2>
+      <p class="section-lead">Hand-selected varieties for every taste and use — from sweet snacking to commercial baking.</p>
+    </div>
+    <a class="btn-prim" style="background:var(--dg)" href="https://wa.me/918177837267?text=Hi!%20I%20want%20bulk%20pricing." target="_blank">Bulk Enquiry 📦</a>
+  </div>
+  <div class="products-grid" id="products-grid"></div>
+</section>
+
+<!-- COUNTERS -->
+<div id="counters">
+  <div class="counter-grid">
+    <div class="reveal"><div class="cnum" data-target="15">0</div><div class="clabel">Years of Farming</div></div>
+    <div class="reveal"><div class="cnum" data-target="500">0</div><div class="clabel">Happy Customers</div></div>
+    <div class="reveal"><div class="cnum" data-target="5000">0</div><div class="clabel">Kilos Sold Per Season</div></div>
+    <div class="reveal"><div class="cnum" data-target="100">0</div><div class="clabel">% Natural Processing</div></div>
+  </div>
+</div>
+
+<!-- HEALTH BENEFITS -->
+<section id="health">
+  <div class="health-grid">
+    <div class="reveal-l">
+      <div class="section-eyebrow">💚 Health Benefits</div>
+      <h2 class="section-title">Nature's Tiny<br>Powerhouses</h2>
+      <p class="section-lead">Kissmiss (raisins) are one of nature's most nutritious dry fruits — packed with energy, iron, and antioxidants. A handful a day keeps fatigue at bay.</p>
+      <div class="health-cards">
+        <div class="health-card reveal"><span class="health-icon">⚡</span><div class="health-title">Instant Energy</div><div class="health-desc">Natural sugars provide quick energy boost — perfect for athletes & active lifestyles.</div></div>
+        <div class="health-card reveal"><span class="health-icon">🩸</span><div class="health-title">Rich in Iron</div><div class="health-desc">Excellent source of iron, supporting haemoglobin production and preventing anaemia.</div></div>
+        <div class="health-card reveal"><span class="health-icon">🦷</span><div class="health-title">Bone Health</div><div class="health-desc">Calcium and boron in raisins help maintain strong bones and prevent osteoporosis.</div></div>
+        <div class="health-card reveal"><span class="health-icon">🫀</span><div class="health-title">Heart Friendly</div><div class="health-desc">Potassium and antioxidants help regulate blood pressure and support cardiovascular health.</div></div>
+        <div class="health-card reveal"><span class="health-icon">🌿</span><div class="health-title">Antioxidants</div><div class="health-desc">Phytonutrients fight free radicals, reducing inflammation and supporting immunity.</div></div>
+        <div class="health-card reveal"><span class="health-icon">💊</span><div class="health-title">Aids Digestion</div><div class="health-desc">Dietary fibre promotes healthy digestion and prevents constipation naturally.</div></div>
+        <div class="health-highlight">
+          <span class="health-highlight-num">249</span>
+          <div class="health-highlight-label">Calories per 100g · Nature's perfect snack</div>
+        </div>
+      </div>
+    </div>
+    <div class="health-img-wrap reveal-r">
+      <img class="health-img" src="https://almondhouse.com/cdn/shop/files/IMG_1353.jpg?v=1703227571&width=800" alt="Premium raisins health" loading="lazy"/>
+      <div class="health-badge-float">
+        <strong>Zero</strong>
+        <small>Preservatives · Chemicals · Additives</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGING -->
+<section id="packaging">
+  <div style="text-align:center" class="reveal">
+    <div class="section-eyebrow" style="justify-content:center">📦 Premium Packaging</div>
+    <h2 class="section-title">Packaging That Protects Quality</h2>
+    <p class="section-lead" style="margin:0 auto;text-align:center">From farm-fresh retail pouches to large export sacks — we pack with care at every scale.</p>
+  </div>
+  
+    
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div style="text-align:center" class="reveal">
+    <div class="section-eyebrow" style="justify-content:center;color:var(--gold3)">⭐ Why Choose Us</div>
+    <h2 class="section-title" style="color:var(--white)">The Rajmudra Difference</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-item reveal"><span class="why-icon">🌾</span><div class="why-title">100% Farm Direct</div><div class="why-desc">You buy from the farmer who grew it. No traders, no markups, no middlemen.</div></div>
+    <div class="why-item reveal"><span class="why-icon">☀️</span><div class="why-title">Naturally Sun-Dried</div><div class="why-desc">Zero artificial processing. Pure sunlight. No sulphur dioxide or preservatives.</div></div>
+    <div class="why-item reveal"><span class="why-icon">🚚</span><div class="why-title">Pan-India Delivery</div><div class="why-desc">Delivered fresh across all of India within 3–5 working days via trusted couriers.</div></div>
+    <div class="why-item reveal"><span class="why-icon">💬</span><div class="why-title">Direct Farmer Contact</div><div class="why-desc">Call or WhatsApp and you speak directly with Yash Shinde from the farm.</div></div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div style="text-align:center" class="reveal">
+    <div class="section-eyebrow" style="justify-content:center">🏆 Quality Assurance</div>
+    <h2 class="section-title">Standards We Uphold</h2>
+    <p class="section-lead" style="margin:0 auto;text-align:center">Our commitment to quality is backed by testing, transparency, and tradition.</p>
+  </div>
+  <div class="cert-grid">
+    <div class="cert-item reveal"><span class="cert-icon">🌿</span><div class="cert-title">Natural Processing</div><div class="cert-desc">No artificial preservatives, colourants or additives in any product.</div></div>
+    <div class="cert-item reveal"><span class="cert-icon">🔬</span><div class="cert-title">Lab Tested</div><div class="cert-desc">Organic variety tested for pesticide residues before every dispatch.</div></div>
+    <div class="cert-item reveal"><span class="cert-icon">⚖️</span><div class="cert-title">Accurate Weights</div><div class="cert-desc">Digital weighing for every pack. No under-weight, no compromise.</div></div>
+    <div class="cert-item reveal"><span class="cert-icon">🤲</span><div class="cert-title">Hand Sorted</div><div class="cert-desc">Every batch hand-cleaned and sorted for consistent quality.</div></div>
+    <div class="cert-item reveal"><span class="cert-icon">📋</span><div class="cert-title">FSSAI Compliant</div><div class="cert-desc">Packed in compliance with Indian food safety standards.</div></div>
+  </div>
+</section>
+
+<!-- VIRTUAL FARM EXPERIENCE -->
+<section id="virtual-farm">
+  <div class="vfarm-bg"></div>
+  <div class="vfarm-content reveal">
+    <div class="section-eyebrow">🌄 Virtual Farm Experience</div>
+    <h2 class="section-title">Walk Through Our Nashik Vineyard</h2>
+    <p class="section-lead">Can't visit in person? Experience the magic of our Nashik farm — from sunrise over the vines to the golden raisins drying under open skies. Every detail, every aroma, every tradition.</p>
+    <div class="vfarm-features">
+      <div class="vfarm-feat"><span class="vfarm-feat-icon">🌅</span><div class="vfarm-feat-title">Sunrise Vineyard</div><div class="vfarm-feat-desc">Watch the sun rise over 10 acres of lush Thompson Seedless vines in Niphad.</div></div>
+      <div class="vfarm-feat"><span class="vfarm-feat-icon">✂️</span><div class="vfarm-feat-title">Harvest Season</div><div class="vfarm-feat-desc">February to March — our family hand-harvests every bunch with care and pride.</div></div>
+      <div class="vfarm-feat"><span class="vfarm-feat-icon">☀️</span><div class="vfarm-feat-title">Sun-Drying Beds</div><div class="vfarm-feat-desc">Rows of raised bamboo drying beds where grapes transform into sweet raisins.</div></div>
+    </div>
+    <div class="vfarm-cta">
+      <a class="btn-prim" href="https://wa.me/918177837267?text=Hi!%20I%20want%20to%20visit%20the%20farm." target="_blank">🚗 Visit Our Farm</a>
+      <a class="btn-ghost" href="#gallery">📸 See Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER STRIP -->
+<div id="order-strip">
+  <div class="obox reveal"><span class="obox-icon">🚚</span><div class="obox-title">Pan-India Shipping</div><div class="obox-text">Bulk orders dispatched within 2–3 working days across all of India.</div></div>
+  <div class="obox reveal"><span class="obox-icon">⚖️</span><div class="obox-title">Minimum Order</div><div class="obox-text">5 kg per variety for retail. 25 kg+ for wholesale pricing.</div></div>
+  <div class="obox reveal"><span class="obox-icon">💳</span><div class="obox-title">Easy Payment</div><div class="obox-text">UPI, NEFT, RTGS accepted. 100% advance for new orders.</div></div>
+  <div class="obox reveal"><span class="obox-icon">✅</span><div class="obox-title">Quality Guarantee</div><div class="obox-text">Not satisfied? We'll make it right. Your trust is everything.</div></div>
+</div>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div style="text-align:center;margin-bottom:56px" class="reveal">
+    <div class="section-eyebrow" style="justify-content:center">⭐ Customer Reviews</div>
+    <h2 class="section-title">What Our Buyers Say</h2>
+    <p class="section-lead" style="margin:0 auto;text-align:center">Real words from real buyers who order season after season.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="rcard reveal"><div class="stars">★★★★★</div><div class="rtext">Ordered 25 kg of Green Kissmiss for my mithai shop. Quality is outstanding — plump, clean and uniform. My customers love it. Will reorder every season!</div><div class="reviewer"><div class="ravatar">R</div><div><div class="rname">Ramesh Patil</div><div class="rloc">Pune, Maharashtra</div></div></div></div>
+    <div class="rcard reveal"><div class="stars">★★★★★</div><div class="rtext">Best dry raisins I've tasted. Natural sweetness, no artificial coating. I buy 10 kg every month for my family and gifting. Directly from the farmer is the best part.</div><div class="reviewer"><div class="ravatar">P</div><div><div class="rname">Priya Sharma</div><div class="rloc">Mumbai, Maharashtra</div></div></div></div>
+    <div class="rcard reveal"><div class="stars">★★★★★</div><div class="rtext">Yash Bhai handles orders very professionally. Got 50 kg bulk pack on time, properly packed. Price is very competitive compared to market. Highly recommend for traders.</div><div class="reviewer"><div class="ravatar">A</div><div><div class="rname">Abdul Shaikh</div><div class="rloc">Surat, Gujarat</div></div></div></div>
+    <div class="rcard reveal"><div class="stars">★★★★☆</div><div class="rtext">Organic Kissmiss is worth every rupee. Much better than what we used to buy from the market. The colour and taste are genuinely different — you can feel it's natural.</div><div class="reviewer"><div class="ravatar">N</div><div><div class="rname">Neha Kulkarni</div><div class="rloc">Aurangabad, Maharashtra</div></div></div></div>
+    <div class="rcard reveal"><div class="stars">★★★★★</div><div class="rtext">Third year ordering from Rajmudra. Consistent quality every time. This season's batch is even better than last year. Jumbo variety is perfect for my export packaging.</div><div class="reviewer"><div class="ravatar">S</div><div><div class="rname">Suresh Agarwal</div><div class="rloc">Nagpur, Maharashtra</div></div></div></div>
+    <div class="rcard reveal"><div class="stars">★★★★★</div><div class="rtext">Ordered as a trial and was very happy. WhatsApp response is fast, delivery in 3 days to Hyderabad. Taste is excellent. Will recommend to all my relatives in dry fruits business.</div><div class="reviewer"><div class="ravatar">V</div><div><div class="rname">Vijay Reddy</div><div class="rloc">Hyderabad, Telangana</div></div></div></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div style="text-align:center;margin-bottom:0" class="reveal">
+    <div class="section-eyebrow" style="justify-content:center">📸 From Our Farm</div>
+    <h2 class="section-title">Nashik in Every Frame</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gitem reveal"><img src="https://media.istockphoto.com/id/540621282/video/sunlight-over-the-vineyard.avif?s=640x640&k=20&c=hTwdfdvJy-Te2ejbc3DlB2ZwJpM3xPeq2XOJjUwgaZQ=" alt="Vineyard" loading="lazy"/></div>
+    <div class="gitem reveal"><img src="https://pbs.twimg.com/media/EodH4_9VgAEr7xV?format=jpg&name=900x900" alt="Raisins" loading="lazy"/></div>
+    <div class="gitem reveal"><img src="https://pbs.twimg.com/media/ETB3yoCU0AAI6iN?format=jpg&name=900x900" alt="Farm" loading="lazy"/></div>
+    <div class="gitem reveal"><img src="https://media.istockphoto.com/id/1907407374/video/drone-shot-of-grape-vineyard-agricultural-field.avif?s=640x640&k=20&c=XEH23yPY0bKfdX6NfSmRxVZqDo_0-04HXprN8iVz3rg=" alt="Grapes" loading="lazy"/></div>
+    <div class="gitem reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Grape_vineyards_Viticulture_Farming_Sula_winery_Nasik_Maharashtra_India.jpg/500px-Grape_vineyards_Viticulture_Farming_Sula_winery_Nasik_Maharashtra_India.jpg" alt="Harvest" loading="lazy"/></div>
+  </div>
+</section>
+
+<!-- BULK / EXPORT ENQUIRY -->
+<section id="bulk">
+  <div class="bulk-grid">
+    <div class="reveal-l">
+      <div class="section-eyebrow">📦 Bulk & Export</div>
+      <h2 class="section-title">For Traders, Exporters<br>& Wholesale Buyers</h2>
+      <p class="section-lead">We supply to sweet shops, bakeries, dry fruit retailers, exporters and FMCG brands across India. Competitive bulk pricing with consistent quality every season.</p>
+      <div class="bulk-tiers">
+        <div class="bulk-tier">
+          <div><div class="bulk-tier-qty">5–24 kg</div><div class="bulk-tier-label">Retail Order</div></div>
+          <div class="bulk-tier-disc">Standard</div>
+          <button class="bulk-tier-btn" onclick="window.open('https://wa.me/918177837267?text=Hi!+I+want+to+order+5-24+kg.')">Order →</button>
+        </div>
+        <div class="bulk-tier featured">
+          <div><div class="bulk-tier-qty">25–99 kg</div><div class="bulk-tier-label">Wholesale Order</div></div>
+          <div class="bulk-tier-disc">5% Off</div>
+          <button class="bulk-tier-btn" onclick="window.open('https://wa.me/918177837267?text=Hi!+I+want+25-99+kg+wholesale.')">Order →</button>
+        </div>
+        <div class="bulk-tier">
+          <div><div class="bulk-tier-qty">100–499 kg</div><div class="bulk-tier-label">Distributor</div></div>
+          <div class="bulk-tier-disc">10% Off</div>
+          <button class="bulk-tier-btn" onclick="window.open('https://wa.me/918177837267?text=Hi!+I+want+100-499+kg.')">Order →</button>
+        </div>
+        <div class="bulk-tier featured">
+          <div><div class="bulk-tier-qty">500+ kg</div><div class="bulk-tier-label">Export / Large Scale</div></div>
+          <div class="bulk-tier-disc">Custom Price</div>
+          <button class="bulk-tier-btn" onclick="window.open('https://wa.me/918177837267?text=Hi!+I+need+500%2B+kg+export+pricing.')">Enquire →</button>
+        </div>
+      </div>
+    </div>
+    <div class="reveal-r">
+      <div class="bulk-form-wrap">
+        <div class="bulk-form-title">Bulk Enquiry Form</div>
+        <div class="bulk-form-sub">Fill this form and we'll get back within 24 hours with a custom quote.</div>
+        <div class="bulk-form">
+          <div class="form-row">
+            <div class="fg"><label>Name / Company</label><input type="text" id="bname" placeholder="Your name or business"/></div>
+            <div class="fg"><label>Mobile</label><input type="tel" id="bphone" placeholder="+91 98765 43210"/></div>
+          </div>
+          <div class="form-row">
+            <div class="fg"><label>Product</label>
+              <select id="bproduct">
+                <option value="">— Select —</option>
+                <option>Green Kissmiss</option>
+                <option>Black Kissmiss</option>
+                <option>Jumbo Kissmiss</option>
+                <option>Organic Kissmiss</option>
+                <option>Mix / Multiple</option>
+              </select>
+            </div>
+            <div class="fg"><label>Quantity (kg)</label><input type="text" id="bqty" placeholder="e.g. 200 kg"/></div>
+          </div>
+          <div class="fg"><label>Destination / City</label><input type="text" id="bcity" placeholder="Your city and state"/></div>
+          <div class="fg"><label>Additional Requirements</label><textarea id="bnotes" placeholder="Custom packaging, delivery timeline, quality grade…"></textarea></div>
+          <div class="form-msg" id="bulkFormMsg"></div>
+          <button class="form-submit" onclick="submitBulk()">Send Bulk Enquiry →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PINCODE -->
+<section id="pincode-section">
+  <div class="pincode-wrap reveal">
+    <div class="section-eyebrow" style="justify-content:center">🚚 Check Delivery</div>
+    <h2 class="section-title">Delivered to Your Pincode?</h2>
+    <p class="section-lead" style="text-align:center;margin:0 auto">Enter your pincode to check if we deliver to your location.</p>
+    <div class="pincode-form">
+      <input class="pincode-input" id="pincodeInput" type="text" maxlength="6" placeholder="Enter 6-digit pincode…"/>
+      <button class="pincode-btn" onclick="checkPincode()">Check →</button>
+    </div>
+    <div class="pincode-result" id="pincodeResult"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div style="text-align:center;margin-bottom:0" class="reveal">
+    <div class="section-eyebrow" style="justify-content:center">❓ Frequently Asked</div>
+    <h2 class="section-title">Questions & Answers</h2>
+  </div>
+  <div class="faq-wrap">
+    <div class="faq-item reveal"><div class="faq-q">What is the minimum order quantity? <span class="faq-arrow">+</span></div><div class="faq-a">For retail orders, the minimum is 5 kg per variety. For wholesale/bulk pricing, the minimum is 25 kg. We also accept custom quantities for large export orders — just WhatsApp us.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">Do you ship pan-India? <span class="faq-arrow">+</span></div><div class="faq-a">Yes! We deliver across all of India using trusted courier partners like DTDC, BlueDart, and India Post. Standard delivery takes 3–5 working days. Bulk orders (25 kg+) are dispatched within 2–3 working days.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">Are your Kissmiss naturally processed without preservatives? <span class="faq-arrow">+</span></div><div class="faq-a">Yes — all our raisins are naturally sun-dried without artificial additives, sulphur dioxide, or preservatives. Our Organic Kissmiss is grown without synthetic pesticides and is tested for purity.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">What payment methods do you accept? <span class="faq-arrow">+</span></div><div class="faq-a">We accept UPI (PhonePe, GPay, Paytm), bank transfer (NEFT/RTGS/IMPS), and cash on delivery for local Nashik pickup. For new customers, we require 100% advance. Repeat buyers may avail credit terms.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">Can I visit the farm directly? <span class="faq-arrow">+</span></div><div class="faq-a">Absolutely! We welcome buyers to visit our farm at Kede, Ugaon, Niphad, Nashik. Please call or WhatsApp us before visiting so we can arrange a proper welcome and farm tour for you.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">Do you offer custom packaging for gifts or retail brands? <span class="faq-arrow">+</span></div><div class="faq-a">Yes, we offer custom packaging for exporters, gift packers, and retail brands. This includes branded pouches, vacuum-sealed packs, and bulk sacks. WhatsApp us with your requirements for a custom quote.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">What is the shelf life of your Kissmiss? <span class="faq-arrow">+</span></div><div class="faq-a">Properly stored in a cool, dry place, our raisins have a shelf life of 12–18 months. Vacuum-sealed packs last longer. Avoid moisture and direct sunlight for best results.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">Do you supply to export markets? <span class="faq-arrow">+</span></div><div class="faq-a">Yes, we supply to exporters and overseas buyers. Our Jumbo and Organic Kissmiss are popular for export packaging. Contact us for export documentation, phytosanitary certificates, and custom packing requirements.</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="reveal-l">
+      <div class="section-eyebrow">📬 Get in Touch</div>
+      <h2 class="section-title">Talk to Us<br>Directly</h2>
+      <p class="section-lead">We're a small family operation — when you call or message, you're speaking with the farmer directly. No call centres. No bots.</p>
+      <div class="contact-info">
+        <div class="contact-item"><div class="contact-icon">📞</div><div><div class="contact-item-title">Phone / WhatsApp</div><div class="contact-item-val"><a href="tel:+918177837267">+91 81778 37267</a></div></div></div>
+        <div class="contact-item"><div class="contact-icon">✉️</div><div><div class="contact-item-title">Email</div><div class="contact-item-val"><a href="mailto:yashshinde240907@gmail.com">yashshinde240907@gmail.com</a></div></div></div>
+        <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-item-title">Farm Address</div><div class="contact-item-val">Nandurdi Road, At Kede, Post Ugaon,<br>Tal. Niphad, Dist. Nashik,<br>Maharashtra – India</div></div></div>
+        <div class="contact-item"><div class="contact-icon">🕐</div><div><div class="contact-item-title">Availability</div><div class="contact-item-val">Mon – Sat: 8:00 AM – 8:00 PM IST<br>WhatsApp available most of the day</div></div></div>
+      </div>
+    </div>
+    <div class="reveal-r">
+      <div class="contact-form-wrap">
+        <div class="form-title">Send an Enquiry</div>
+        <div class="form-sub">We reply within 24 hours. For faster response, WhatsApp us!</div>
+        <div class="contact-form">
+          <div class="form-row">
+            <div class="fg"><label>Your Name</label><input type="text" id="fname" placeholder="Ramesh Patil"/></div>
+            <div class="fg"><label>Mobile Number</label><input type="tel" id="fphone" placeholder="+91 98765 43210"/></div>
+          </div>
+          <div class="fg"><label>Email Address</label><input type="email" id="femail" placeholder="your@email.com"/></div>
+          <div class="fg"><label>Product Interest</label>
+            <select id="fproduct">
+              <option value="">— Select a product —</option>
+              <option>Green Kissmiss</option>
+              <option>Black Kissmiss</option>
+              <option>Jumbo Kissmiss</option>
+              <option>Organic Kissmiss</option>
+              <option>Economy Bulk Pack</option>
+              <option>Custom Order</option>
+            </select>
+          </div>
+          <div class="fg"><label>Message</label><textarea id="fmessage" placeholder="Tell us your quantity, location, or any questions…"></textarea></div>
+          <div class="form-msg" id="formMsg"></div>
+          <button class="form-submit" onclick="submitForm()">Send Enquiry →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">Raj<em>mudra</em> Traders</div>
+      <div class="footer-tagline">Premium Kissmiss (Raisins) grown on the fertile vineyards of Nashik. Farm-direct quality since 2008. Every raisin tells a story of sun, soil and care from the hands that grew it.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="#story">Our Farm Story</a></li>
+        <li><a href="#products">Products & Prices</a></li>
+        <li><a href="#health">Health Benefits</a></li>
+        <li><a href="#reviews">Customer Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Products</div>
+      <ul class="footer-links">
+        <li><a href="#products">🟢 Green Kissmiss</a></li>
+        <li><a href="#products">⚫ Black Kissmiss</a></li>
+        <li><a href="#products">🔵 Jumbo Kissmiss</a></li>
+        <li><a href="#products">🌿 Organic Kissmiss</a></li>
+        <li><a href="#products">📦 Economy Bulk</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:+918177837267">📞 +91 81778 37267</a></li>
+        <li><a href="mailto:yashshinde240907@gmail.com">✉️ Email Us</a></li>
+        <li><a href="https://wa.me/918177837267" target="_blank">💬 WhatsApp Us</a></li>
+        <li><a href="#contact">📍 Niphad, Nashik</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2025 Rajmudra Traders. All rights reserved. Kede, Ugaon, Niphad, Nashik, Maharashtra.</div>
+    <div>Made with ❤️ in Nashik · <a href="https://wa.me/918177837267" target="_blank" style="color:var(--gold);text-decoration:none">WhatsApp Us</a></div>
+  </div>
+</footer>
+
+<script>
+/* ═══════ PRODUCTS DATA ═══════ */
+const PRODUCTS=[
+  {id:1,name:'Green Kissmiss',tag:'Bestseller',img:'https://5.imimg.com/data5/SELLER/Default/2024/6/430896794/IR/QQ/EE/205622464/green-raisins-kishmish-500x500.jpg',price:'₹180–220',priceNum:200,desc:'Premium light-golden raisins from Thompson Seedless grapes. Plump, juicy, mild sweetness. Perfect for sweets, biryani & snacking.',moq:'Min: 5 kg',fullDesc:'Our flagship Green Kissmiss is made from Thompson Seedless grapes harvested at peak ripeness. Sun-dried for 21 days on raised beds, each raisin retains its natural golden colour, plump texture, and delicately sweet flavour. No artificial colouring or coating. Widely used in mithai, biryani, cake baking, and dry fruit mixes.'},
+  {id:2,name:'Black Kissmiss',tag:'Premium',img:'https://m.media-amazon.com/images/I/71bh8OxSbeL._SX679_.jpg',price:'₹200–260',priceNum:230,desc:'Dark, rich raisins with deep sweetness. Made from Black Muscat grapes. Ideal for cakes, halwa & health snacks.',moq:'Min: 5 kg',fullDesc:'Black Kissmiss is crafted from Black Muscat grapes known for their intense sweetness and rich flavour profile. The natural dark colour comes from the variety itself — no additives. High in antioxidants and iron. Perfect for bakers, health enthusiasts, and premium dry fruit gifting.'},
+  {id:3,name:'Jumbo Kissmiss',tag:'Large Size',img:'https://img.magnific.com/premium-photo/tasty-sun-dried-organic-dry-grapes-raisins-kismis-bowl_336246-7788.jpg?semt=ais_hybrid&w=740&q=80',price:'₹260–320',priceNum:290,desc:'Extra-large premium raisins for gifting, premium boxes & export quality buyers. Uniform size, excellent shelf life.',moq:'Min: 10 kg',fullDesc:'Jumbo Kissmiss is our most premium offering — extra-large uniform raisins selected from the best grapes on the vine. Used by premium dry fruit box brands, exporters, and gifting companies. Plump, soft, and deeply sweet with no stems or debris. Shelf life of 12+ months when properly stored.'},
+  {id:4,name:'Organic Kissmiss',tag:'Organic',img:'https://mylaporeganapathys.com/wp-content/uploads/2025/05/Dry-grapes-Kishmish-min.jpg',price:'₹300–380',priceNum:340,desc:'Grown without synthetic pesticides. Natural colour, intense flavour. Tested for purity. Great for health-conscious buyers.',moq:'Min: 5 kg',fullDesc:'Our Organic Kissmiss is grown on dedicated pesticide-free plots using only natural compost and bio-inputs. Every batch is tested for pesticide residues before packing. Deeper natural colour, more intense flavour, and complete peace of mind for health-conscious consumers and organic food retailers.'},
+  {id:5,name:'Economy Bulk Pack',tag:'Bulk Deal',img:'https://east-fruit.com/wp-content/uploads/2021/09/zokir6.jpg',price:'₹140–170',priceNum:155,desc:'Value-for-money raisins for traders, confectioners, bakeries & wholesalers. Available in 25 kg and 50 kg sacks.',moq:'Min: 25 kg',fullDesc:'The Economy Bulk Pack is designed for bakeries, confectioners, halwai shops, and wholesale traders who need large quantities at competitive prices. Available in 25 kg and 50 kg jute/HDPE sacks. Same clean, properly dried raisins — without the premium sorting for size uniformity. Best value per kg in our range.'}
+];
+
+/* ═══════ CART STATE ═══════ */
+let cart={};let wishlist=new Set();let modalProduct=null;let modalQty=5;
+
+/* ═══════ RENDER PRODUCTS ═══════ */
+function renderProducts(){
+  const grid=document.getElementById('products-grid');
+  let html=PRODUCTS.map(p=>`
+    <div class="pcard reveal">
+      <div class="pcard-img-wrap">
+        <img class="pcard-img" src="${p.img}" alt="${p.name}" loading="lazy"/>
+        <span class="pcard-tag">${p.tag}</span>
+        <button class="pcard-wish ${wishlist.has(p.id)?'active':''}" id="wish-${p.id}" onclick="toggleWish(${p.id})">
+          ${wishlist.has(p.id)?'❤️':'🤍'}
+        </button>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-name">${p.name}</div>
+        <div class="pcard-desc">${p.desc}</div>
+        <div class="pcard-meta">
+          <div class="pcard-price">${p.price}<small>per kg</small></div>
+          <div class="pcard-moq">${p.moq}</div>
+        </div>
+        <div class="pcard-actions">
+          <button class="btn-cart" onclick="addToCart(${p.id})">Add to Cart</button>
+          <button class="btn-quick" onclick="openModal(${p.id})" title="Quick View">🔍</button>
+        </div>
+      </div>
+    </div>`).join('');
+  html+=`<div class="pcard reveal" style="background:var(--dg);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px 28px;min-height:340px;"><div style="font-size:3rem;margin-bottom:18px">📦</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:600;color:var(--gold3);margin-bottom:12px">Custom Order?</div><div style="font-size:.86rem;color:rgba(255,255,255,.65);line-height:1.72;margin-bottom:26px;font-weight:300">Need a specific grade, quantity, or packaging? We fulfil custom orders for exporters, retailers & gift packers.</div><a style="border:1.5px solid var(--gold3);color:var(--gold3);padding:12px 26px;font-family:'DM Sans',sans-serif;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;text-decoration:none;transition:.25s;border-radius:1px;display:inline-block" href="https://wa.me/918177837267?text=Hi!%20I%20need%20a%20custom%20order." target="_blank">Chat with Us</a></div>`;
+  grid.innerHTML=html;
+  initReveal();
+}
+
+/* ═══════ CART ═══════ */
+function addToCart(id){
+  const p=PRODUCTS.find(x=>x.id===id);
+  if(!p)return;
+  if(cart[id]){cart[id].qty+=5}else{cart[id]={...p,qty:5}}
+  updateCartUI();openCart();showToast(`✅ ${p.name} added to cart!`);
+}
+function removeFromCart(id){delete cart[id];updateCartUI()}
+function changeQty(id,delta){if(!cart[id])return;cart[id].qty=Math.max(5,cart[id].qty+delta);updateCartUI()}
+function updateCartUI(){
+  const body=document.getElementById('cart-body');
+  const totalEl=document.getElementById('cart-total-price');
+  const countEl=document.getElementById('cart-count');
+  const keys=Object.keys(cart);
+  if(!keys.length){
+    body.innerHTML=`<div class="cart-empty"><span class="cart-empty-icon">🛒</span>Your cart is empty.<br>Add some premium Kissmiss!</div>`;
+    countEl.style.display='none';totalEl.textContent='₹0';return;
+  }
+  countEl.style.display='flex';countEl.textContent=keys.length;
+  let total=0,html='';
+  keys.forEach(k=>{
+    const item=cart[k];const lt=item.priceNum*item.qty;total+=lt;
+    html+=`<div class="cart-item"><img class="cart-item-img" src="${item.img}" alt="${item.name}"/><div style="flex:1"><div class="cart-item-name">${item.name}</div><div class="cart-item-price">₹${lt.toLocaleString('en-IN')}</div><div class="cart-item-qty"><button class="qty-btn" onclick="changeQty(${k},-5)">−</button><span class="qty-val">${item.qty} kg</span><button class="qty-btn" onclick="changeQty(${k},5)">+</button></div></div><button class="cart-item-del" onclick="removeFromCart(${k})">🗑</button></div>`;
+  });
+  body.innerHTML=html;
+  totalEl.textContent='₹'+total.toLocaleString('en-IN');
+}
+function openCart(){document.getElementById('cart-sidebar').classList.add('open');document.getElementById('cart-overlay').classList.add('show');document.body.style.overflow='hidden'}
+function closeCart(){document.getElementById('cart-sidebar').classList.remove('open');document.getElementById('cart-overlay').classList.remove('show');document.body.style.overflow=''}
+function checkoutWA(){
+  const keys=Object.keys(cart);
+  if(!keys.length){showToast('Your cart is empty!');return}
+  let msg='Hi Rajmudra Traders! I want to place an order:\n\n';let total=0;
+  keys.forEach(k=>{const item=cart[k];const lt=item.priceNum*item.qty;total+=lt;msg+=`• ${item.name} — ${item.qty} kg (~₹${lt.toLocaleString('en-IN')})\n`});
+  msg+=`\nEstimated Total: ₹${total.toLocaleString('en-IN')}\n\nPlease confirm availability and final price.`;
+  window.open(`https://wa.me/918177837267?text=${encodeURIComponent(msg)}`,'_blank');
+}
+
+/* ═══════ WISHLIST ═══════ */
+function toggleWish(id){
+  const btn=document.getElementById(`wish-${id}`);
+  if(wishlist.has(id)){wishlist.delete(id);btn.innerHTML='🤍';btn.classList.remove('active');showToast('Removed from wishlist')}
+  else{wishlist.add(id);btn.innerHTML='❤️';btn.classList.add('active');showToast('❤️ Added to wishlist!')}
+}
+
+/* ═══════ MODAL ═══════ */
+function openModal(id){
+  const p=PRODUCTS.find(x=>x.id===id);if(!p)return;
+  modalProduct=p;modalQty=5;
+  document.getElementById('pmodal-img').src=p.img;
+  document.getElementById('pmodal-name').textContent=p.name;
+  document.getElementById('pmodal-price').textContent=p.price+' per kg';
+  document.getElementById('pmodal-desc').textContent=p.fullDesc;
+  document.getElementById('pmodal-qty').textContent=modalQty;
+  document.getElementById('pmodal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('pmodal').classList.remove('open');document.body.style.overflow=''}
+function changeModalQty(delta){modalQty=Math.max(5,modalQty+delta);document.getElementById('pmodal-qty').textContent=modalQty}
+function addFromModal(){
+  if(!modalProduct)return;
+  if(cart[modalProduct.id]){cart[modalProduct.id].qty+=modalQty}else{cart[modalProduct.id]={...modalProduct,qty:modalQty}}
+  updateCartUI();closeModal();openCart();showToast(`✅ ${modalProduct.name} added!`);
+}
+function orderFromModal(){
+  if(!modalProduct)return;
+  const msg=`Hi Rajmudra Traders! I want to order *${modalProduct.name}* — ${modalQty} kg. Please share payment and delivery details.`;
+  window.open(`https://wa.me/918177837267?text=${encodeURIComponent(msg)}`,'_blank');
+}
+
+/* ═══════ AI CHAT ═══════ */
+const aiResponses={
+  'product':['We offer 5 varieties: 🟢 Green Kissmiss (₹180–220/kg), ⚫ Black Kissmiss (₹200–260/kg), 🔵 Jumbo Kissmiss (₹260–320/kg), 🌿 Organic Kissmiss (₹300–380/kg), and 📦 Economy Bulk (₹140–170/kg). All naturally sun-dried!'],
+  'price':['Our prices depend on variety and quantity:\n• Green Kissmiss: ₹180–220/kg\n• Black Kissmiss: ₹200–260/kg\n• Jumbo Kissmiss: ₹260–320/kg\n• Organic Kissmiss: ₹300–380/kg\n• Economy Bulk: ₹140–170/kg\n\nBulk discounts available for 25 kg+!'],
+  'deliver':['Yes! We deliver pan-India 🚚 through DTDC, BlueDart & India Post. Standard delivery: 3–5 working days. Bulk orders dispatched in 2–3 days. Free shipping on orders above ₹2,000!'],
+  'moq':['Minimum order:\n• Retail: 5 kg per variety\n• Wholesale: 25 kg\n• Export/Custom: flexible\n\nFor bulk quotes, WhatsApp us directly at +91 81778 37267!'],
+  'order':['Easy to order! 3 ways:\n1️⃣ Add to cart & checkout via WhatsApp\n2️⃣ Click "Order Now" in the navbar\n3️⃣ WhatsApp directly: +91 81778 37267\n\nWe accept UPI, NEFT & bank transfer.'],
+  'organic':['Our Organic Kissmiss (₹300–380/kg) is grown without synthetic pesticides, using only natural compost. Each batch is lab-tested for residues. Min 5 kg order.'],
+  'visit':['Absolutely! Visit us at: Nandurdi Road, At Kede, Post Ugaon, Tal. Niphad, Nashik. Please WhatsApp before visiting so we can welcome you properly! 🌿'],
+  'default':['Great question! For the best answer, WhatsApp us at +91 81778 37267 — Yash Shinde will personally reply. We respond within a few hours! 😊']
+};
+let aiOpen=false;
+function toggleAI(){
+  aiOpen=!aiOpen;
+  const chat=document.getElementById('ai-chat');
+  chat.classList.toggle('open',aiOpen);
+  if(aiOpen&&!document.getElementById('ai-body').children.length){
+    addBotMsg("Jai Maharashtra! 🌿 I'm your Kissmiss Assistant from Rajmudra Traders. How can I help you today?");
+  }
+}
+function addBotMsg(text){
+  const body=document.getElementById('ai-body');
+  const div=document.createElement('div');
+  div.className='ai-msg bot';
+  div.style.whiteSpace='pre-line';
+  body.appendChild(div);
+  // Typing effect
+  const typing=document.createElement('div');typing.className='ai-typing';
+  typing.innerHTML='<span></span><span></span><span></span>';
+  body.appendChild(typing);body.scrollTop=body.scrollHeight;
+  setTimeout(()=>{typing.remove();div.textContent=text;body.scrollTop=body.scrollHeight},900);
+}
+function addUserMsg(text){
+  const body=document.getElementById('ai-body');
+  const div=document.createElement('div');div.className='ai-msg user';div.textContent=text;
+  body.appendChild(div);body.scrollTop=body.scrollHeight;
+}
+function sendAI(){
+  const input=document.getElementById('ai-input');
+  const q=input.value.trim();if(!q)return;
+  addUserMsg(q);input.value='';
+  const ql=q.toLowerCase();
+  let resp=aiResponses.default[0];
+  for(const [key,answers] of Object.entries(aiResponses)){
+    if(ql.includes(key)){resp=answers[0];break}
+  }
+  setTimeout(()=>addBotMsg(resp),400);
+}
+function quickAsk(q){addUserMsg(q);const ql=q.toLowerCase();let resp=aiResponses.default[0];for(const [key,answers] of Object.entries(aiResponses)){if(ql.includes(key)){resp=answers[0];break}}setTimeout(()=>addBotMsg(resp),400)}
+document.addEventListener('DOMContentLoaded',()=>{
+  const inp=document.getElementById('ai-input');
+  if(inp)inp.addEventListener('keydown',e=>{if(e.key==='Enter')sendAI()});
+});
+
+/* ═══════ GREETING + WEATHER AMBIENCE ═══════ */
+function setGreeting(){
+  const h=new Date().getHours();
+  const bar=document.getElementById('greeting-bar');
+  let g='🌅 Good morning!';
+  bar.className='morning';
+  if(h>=12&&h<17){g='☀️ Good afternoon!';bar.className='afternoon'}
+  else if(h>=17&&h<21){g='🌇 Good evening!';bar.className='evening'}
+  else if(h>=21||h<5){g='🌙 Good night!';bar.className='night'}
+  document.getElementById('greeting-text').textContent=g;
+}
+setGreeting();
+
+/* ═══════ NAVBAR ═══════ */
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>80)});
+
+/* ═══════ MOBILE NAV ═══════ */
+document.getElementById('hamburger').addEventListener('click',()=>{document.getElementById('mobileNav').classList.add('open');document.body.style.overflow='hidden'});
+document.getElementById('mobileClose').addEventListener('click',closeMob);
+function closeMob(){document.getElementById('mobileNav').classList.remove('open');document.body.style.overflow=''}
+
+/* ═══════ FAQ ═══════ */
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!isOpen)item.classList.add('open');
+  });
+});
+
+/* ═══════ PINCODE ═══════ */
+const SERVICEABLE=['400','401','402','403','410','411','412','413','414','415','416','417','418','419','420','421','422','423','424','425','426','427','428','429','430','431','432','433','440','441','442','443','444','445','500','501','502','600','601','602','110','111','560','570','380','390','395','302','313','474','700','731','800'];
+function checkPincode(){
+  const pin=document.getElementById('pincodeInput').value.trim();
+  const res=document.getElementById('pincodeResult');
+  if(!/^\d{6}$/.test(pin)){res.className='pincode-result no';res.style.display='block';res.textContent='Please enter a valid 6-digit pincode.';return}
+  const prefix=pin.slice(0,3);const ok=SERVICEABLE.includes(prefix);
+  res.className=`pincode-result ${ok?'ok':'no'}`;res.style.display='block';
+  res.textContent=ok?`✅ We deliver to ${pin}! Estimated 3–5 working days.`:`⚠️ We may not have standard courier to ${pin} yet. WhatsApp us at +91 81778 37267 — we'll find a way!`;
+}
+document.getElementById('pincodeInput').addEventListener('keydown',e=>{if(e.key==='Enter')checkPincode()});
+
+/* ═══════ FORMS ═══════ */
+function submitForm(){
+  const name=document.getElementById('fname').value.trim();
+  const email=document.getElementById('femail').value.trim();
+  const phone=document.getElementById('fphone').value.trim();
+  const product=document.getElementById('fproduct').value;
+  const message=document.getElementById('fmessage').value.trim();
+  if(!name){showFormMsg('formMsg','err','Please enter your name.');return}
+  if(!email&&!phone){showFormMsg('formMsg','err','Please provide email or phone.');return}
+  const wa=`Hi! I'm *${name}*.\n📦 Product: ${product||'Not specified'}\n📱 Phone: ${phone||'N/A'}\n✉️ Email: ${email||'N/A'}\n\n${message||'I would like to enquire.'}`;
+  showFormMsg('formMsg','ok','✅ Redirecting to WhatsApp…');
+  setTimeout(()=>window.open(`https://wa.me/918177837267?text=${encodeURIComponent(wa)}`,'_blank'),1000);
+}
+function submitBulk(){
+  const name=document.getElementById('bname').value.trim();
+  const phone=document.getElementById('bphone').value.trim();
+  const product=document.getElementById('bproduct').value;
+  const qty=document.getElementById('bqty').value.trim();
+  const city=document.getElementById('bcity').value.trim();
+  const notes=document.getElementById('bnotes').value.trim();
+  if(!name){showFormMsg('bulkFormMsg','err','Please enter your name.');return}
+  if(!phone){showFormMsg('bulkFormMsg','err','Please provide phone number.');return}
+  if(!product||!qty){showFormMsg('bulkFormMsg','err','Please select product and quantity.');return}
+  const wa=`*BULK ENQUIRY*\n\n👤 ${name}\n📱 ${phone}\n📦 Product: ${product}\n⚖️ Qty: ${qty}\n📍 City: ${city||'Not specified'}\n\n${notes||'Please share bulk pricing.'}`;
+  showFormMsg('bulkFormMsg','ok','✅ Redirecting to WhatsApp for bulk enquiry…');
+  setTimeout(()=>window.open(`https://wa.me/918177837267?text=${encodeURIComponent(wa)}`,'_blank'),1000);
+}
+function showFormMsg(id,type,text){
+  const el=document.getElementById(id);
+  el.className=`form-msg ${type}`;el.textContent=text;el.style.display='block';
+  setTimeout(()=>el.style.display='none',5500);
+}
+
+/* ═══════ TOAST ═══════ */
+let toastTimer;
+function showToast(msg){
+  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2800);
+}
+
+/* ═══════ SCROLL REVEAL ═══════ */
+function initReveal(){
+  const els=document.querySelectorAll('.reveal,.reveal-l,.reveal-r');
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{
+      if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*90);obs.unobserve(e.target)}
+    });
+  },{threshold:.1});
+  els.forEach(el=>obs.observe(el));
+}
+
+/* ═══════ COUNTER ANIMATION ═══════ */
+function animateCounters(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const el=e.target;const target=+el.dataset.target;
+        const dur=1800;let cur=0;const inc=target/60;
+        const timer=setInterval(()=>{
+          cur+=inc;if(cur>=target){cur=target;clearInterval(timer)}
+          el.textContent=Math.floor(cur)+(target>=100?'+':'');
+        },dur/60);
+        obs.unobserve(el);
+      }
+    });
+  },{threshold:.5});
+  document.querySelectorAll('[data-target]').forEach(c=>obs.observe(c));
+}
+
+/* ═══════ CURSOR ═══════ */
+const cursorEl=document.getElementById('cursor');
+const cursorRingEl=document.getElementById('cursor-ring');
+let cx=0,cy=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY;cursorEl.style.left=cx+'px';cursorEl.style.top=cy+'px'});
+(function animRing(){rx+=(cx-rx)*.12;ry+=(cy-ry)*.12;cursorRingEl.style.left=rx+'px';cursorRingEl.style.top=ry+'px';requestAnimationFrame(animRing)})();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('cursor-grow'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('cursor-grow'));
+});
+
+/* ═══════ HERO CANVAS PARTICLES ═══════ */
+(function(){
+  const canvas=document.getElementById('hero-canvas');
+  const ctx=canvas.getContext('2d');
+  let particles=[];let W,H;
+  function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight}
+  resize();window.addEventListener('resize',resize);
+  class Particle{
+    constructor(){this.reset()}
+    reset(){this.x=Math.random()*W;this.y=H+10;this.size=Math.random()*2+.5;this.speedX=(Math.random()-.5)*.3;this.speedY=-(Math.random()*.4+.1);this.opacity=Math.random()*.4+.1;this.life=0;this.maxLife=Math.random()*400+200}
+    update(){this.x+=this.speedX;this.y+=this.speedY;this.life++;if(this.life>this.maxLife||this.y<0)this.reset();const prog=this.life/this.maxLife;this.alpha=prog<.2?prog/.2:prog>.8?(1-prog)/.2:1;this.alpha*=this.opacity}
+    draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.size,0,Math.PI*2);ctx.fillStyle=`rgba(232,196,106,${this.alpha})`;ctx.fill()}
+  }
+  for(let i=0;i<100;i++){const p=new Particle();p.y=Math.random()*H;p.life=Math.random()*p.maxLife;particles.push(p)}
+  function animate(){ctx.clearRect(0,0,W,H);particles.forEach(p=>{p.update();p.draw()});requestAnimationFrame(animate)}
+  animate();
+})();
+
+/* ═══════ LOADER PARTICLES ═══════ */
+(function(){
+  const canvas=document.getElementById('loaderCanvas');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+  canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+  const pts=[];for(let i=0;i<40;i++)pts.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,size:Math.random()*2+.5,a:Math.random()*.4});
+  function animLoader(){ctx.clearRect(0,0,canvas.width,canvas.height);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>canvas.width)p.vx*=-1;if(p.y<0||p.y>canvas.height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.size,0,Math.PI*2);ctx.fillStyle=`rgba(232,196,106,${p.a})`;ctx.fill()});requestAnimationFrame(animLoader)}
+  animLoader();
+})();
+
+/* ═══════ LOADER ═══════ */
+(function(){
+  const bar=document.getElementById('loaderBar');
+  let prog=0;
+  const iv=setInterval(()=>{
+    prog+=Math.random()*10+4;if(prog>100)prog=100;
+    bar.style.width=prog+'%';
+    if(prog===100){
+      clearInterval(iv);
+      setTimeout(()=>{
+        document.getElementById('loader').classList.add('hide');
+        setTimeout(()=>document.getElementById('loader').style.display='none',900);
+      },500);
+    }
+  },60);
+})();
+
+/* ═══════ INIT ═══════ */
+renderProducts();
+initReveal();
+animateCounters();
+</script>
+</body>
+</html>
